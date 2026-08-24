@@ -1,13 +1,15 @@
-# VII. JÖSz Nyári Egyetem – statikus weboldal
+# VII. JÖSz Nyári Egyetem – honlap
 
-Frissített változat a 2026. augusztus 24-én feltöltött programtáblázat és arculati anyagok alapján.
+Statikus, reszponzív honlap a 2026. augusztus 28–30. között megrendezett VII. JÖSz Nyári Egyetemhez.
 
-## Újdonságok
-- Programszűrés helyszín, előadó, téma, jelleg és időpont szerint.
-- Gyors nap-szűrők.
-- Posztolható előadói grafikák.
-- Kempingtérkép.
-- A helyszín további programlehetőségeinek külön listája.
-- Baranyi Krisztina névforma.
+## Használat
+Nyisd meg az `index.html` fájlt böngészőben, vagy töltsd fel a teljes mappát GitHub Pagesre, Netlifyra vagy más statikus tárhelyre.
 
-A honlap teljesen statikus, ezért GitHub Pagesen, Netlifyon vagy más statikus tárhelyen ingyenesen közzétehető.
+A weboldal tartalmazza a programot, előadókat, jegyárakat, helyszíni lehetőségeket, kempingtérképet, JÖSz-bemutatkozást, támogatási adatokat és egy Google Maps útvonaltervezővel ellátott Odaút szekciót.
+
+
+## Új vizuális elemek
+- Önkormányzatiság 2026-ban közös előadói grafika
+- Baranyi Krisztina és Dr. Cser-Palkovics András egyéni előadói grafikái
+- JÖSz Alapítvány, JÖSz Intézet és JÖSz Alumni logók
+- Kempingtérkép a helyszín szekcióban

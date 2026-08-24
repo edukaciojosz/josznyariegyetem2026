@@ -36,7 +36,7 @@
     .skip{position:absolute;left:-9999px;top:0;background:#fff;padding:10px;z-index:999}
     .skip:focus{left:10px;top:10px}
     .container{width:min(1160px,calc(100% - 40px));margin:auto}
-    .contours{position:absolute;inset:0;opacity:.22;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg width='260' height='220' viewBox='0 0 260 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23b9c79c' stroke-width='1.4'%3E%3Cpath d='M-20 48c42-36 76-31 112-13 44 23 90 13 127-13 29-21 53-5 65 10'/%3E%3Cpath d='M-30 86c39-27 73-22 105-4 38 21 81 16 120-8 37-23 73-10 91 14'/%3E%3Cpath d='M-12 132c37-21 66-19 94-3 34 19 68 18 104-1 31-16 61-15 89 5'/%3E%3Cpath d='M-25 182c31-29 70-32 106-11 34 20 69 23 107 7 40-17 78-10 104 17'/%3E%3C/g%3E%3C/svg%3E")}
+    .contours{position:absolute;inset:-3%;opacity:.52;pointer-events:none;background:url('assets/site-background.png') center center / cover no-repeat;filter:saturate(1.03) contrast(1.02)}
 
     header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,63,52,.91);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12)}
     nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:var(--white)}
@@ -87,9 +87,19 @@
     .stat b{font-family:var(--display);font-size:42px;display:block;line-height:1;color:var(--green-900)}
     .stat span{display:block;margin-top:9px;color:#577068;font-weight:700}
 
-    .program-section{background:var(--green-950);color:var(--white);position:relative;overflow:hidden}
+    .program-section{background:linear-gradient(180deg,rgba(5,63,52,.96),rgba(5,63,52,.96));color:var(--white);position:relative;overflow:hidden}
     .program-section .section-head p{color:rgba(255,255,255,.66)}
     .program-section .eyebrow{color:var(--orange)}
+    .program-brand-banner{display:block;width:100%;margin:2px 0 30px;border-radius:24px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.12)}
+    .program-brand-banner img{display:block;width:100%;height:auto;aspect-ratio:3/1;object-fit:cover}
+    .program-visuals{margin-top:42px;padding-top:34px;border-top:1px solid rgba(255,255,255,.13)}
+    .program-visuals-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}
+    .program-visuals-head h3{font-family:var(--display);font-size:clamp(32px,4vw,48px);line-height:1;text-transform:uppercase;margin:6px 0 0}
+    .program-visuals-head p{max-width:520px;margin:0;color:rgba(255,255,255,.68)}
+    .program-visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .program-visual-card{display:block;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 16px 38px rgba(0,0,0,.22);transition:transform .24s ease,box-shadow .24s ease}
+    .program-visual-card:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(0,0,0,.28)}
+    .program-visual-card img{display:block;width:100%;height:auto;aspect-ratio:4/5.65;object-fit:cover}
     .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
     .tab{border:1px solid rgba(255,255,255,.26);background:transparent;color:white;padding:11px 16px;border-radius:999px;font-weight:850;cursor:pointer}
     .tab.active{background:var(--orange);border-color:var(--orange)}
@@ -102,7 +112,7 @@
     .pill{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;background:var(--sage);color:white;padding:6px 10px;border-radius:999px;white-space:nowrap}
     .pill.social{background:var(--red)}
 
-    .program-poster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:6px 0 38px}
+    .program-poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:6px 0 38px}
     .program-poster{display:block;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:var(--green-950);transition:transform .25s ease,box-shadow .25s ease}
     .program-poster:hover{transform:translateY(-4px)}
     .program-poster img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
@@ -146,7 +156,7 @@
     .site-map img{display:block;width:100%;height:auto}
     .site-map-note{margin:12px 4px 0;font-size:13px;color:#65756f}
 
-    .organizer-section{background:var(--paper);position:relative;overflow:hidden}
+    .organizer-section{background:linear-gradient(180deg,rgba(245,239,223,.96),rgba(245,239,223,.96));position:relative;overflow:hidden}
     .organizer-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:stretch}
     .organizer-story{background:var(--green-950);color:white;border-radius:30px;padding:42px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
     .organizer-story .eyebrow{color:var(--orange)}
@@ -159,6 +169,13 @@
     .support-card{background:var(--red);color:white;border-radius:30px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow);position:relative;overflow:hidden}
     .support-card:after{content:"";position:absolute;width:180px;height:180px;border:4px solid rgba(255,255,255,.28);border-radius:46% 54% 61% 39% / 56% 38% 62% 44%;right:-58px;top:-55px;transform:rotate(18deg)}
     .support-card h3{font-family:var(--display);font-size:36px;text-transform:uppercase;line-height:1;margin:8px 0 16px;position:relative;z-index:1}
+    .support-logo{position:relative;z-index:1;width:96px;height:112px;object-fit:contain;object-position:center;margin:0 0 10px;background:rgba(255,255,255,.96);border-radius:18px;padding:10px}
+    .org-logo-strip{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .org-logo-card{background:white;border:1px solid rgba(8,73,59,.12);border-radius:24px;padding:22px;display:grid;grid-template-columns:94px 1fr;gap:18px;align-items:center;box-shadow:0 12px 30px rgba(4,55,44,.07)}
+    .org-logo-card img{width:94px;height:108px;object-fit:contain}
+    .org-logo-card .org-logo-kicker{display:block;color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:11px;margin-bottom:6px}
+    .org-logo-card b{display:block;font-family:var(--display);font-size:25px;line-height:1;text-transform:uppercase;color:var(--green-950);margin-bottom:7px}
+    .org-logo-card p{margin:0;color:var(--green-800);font-size:14px;line-height:1.45}
     .support-card p{color:rgba(255,255,255,.84);position:relative;z-index:1}
     .support-beneficiary{font-weight:900;margin-top:20px}
     .account-box{background:var(--white);color:var(--green-950);border-radius:18px;padding:18px;margin:16px 0 14px;position:relative;z-index:1}
@@ -191,13 +208,13 @@
     .reg-steps div:before{content:counter(step);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--white);color:var(--red);font-weight:900}
     .reg-note{margin-top:18px;font-size:14px;color:rgba(255,255,255,.75)}
 
-    .poster-section{padding:76px 0;background:var(--green-950);color:white}
+    .poster-section{padding:76px 0;background:linear-gradient(180deg,rgba(5,63,52,.96),rgba(5,63,52,.96));color:white}
     .poster-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:34px;align-items:center}
     .poster-img{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);max-width:430px}
     .poster-copy h2{font-family:var(--display);font-size:54px;text-transform:uppercase;line-height:.95;margin:0 0 18px}
     .poster-copy p{color:rgba(255,255,255,.74);max-width:600px}
 
-    footer{background:#032f27;color:white;padding:42px 0 28px}
+    footer{background:linear-gradient(180deg,rgba(3,47,39,.96),rgba(3,47,39,.96));color:white;padding:42px 0 28px}
     .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px}
     footer a{color:white;text-decoration:none}footer a:hover{text-decoration:underline}
     .footer-title{font-family:var(--display);font-size:28px;text-transform:uppercase}
@@ -239,6 +256,19 @@
     .activity-card p{margin:0;color:#5d746d;font-size:14px}
     .activity-kicker{display:inline-block;color:var(--red);font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:900;margin-bottom:10px}
 
+
+    .travel-section{background:linear-gradient(180deg,rgba(243,239,226,.96),rgba(243,239,226,.96))}
+    .travel-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start}
+    .travel-copy{background:var(--green-950);color:white;border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+    .travel-copy h3{font-family:var(--display);font-size:clamp(34px,4vw,52px);line-height:.95;text-transform:uppercase;margin:8px 0 16px}
+    .travel-copy p{color:rgba(255,255,255,.78);margin:0 0 18px}
+    .travel-facts{display:grid;gap:10px;margin:22px 0}
+    .travel-fact{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 16px}
+    .travel-fact b{display:block;color:var(--yellow);font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+    .travel-map{background:white;border-radius:28px;padding:10px;box-shadow:var(--shadow);overflow:hidden}
+    .travel-map iframe{display:block;width:100%;height:520px;border:0;border-radius:20px}
+    .travel-note{margin-top:12px;color:#5c756e;font-size:13px}
+
     dialog{border:0;padding:0;background:transparent;max-width:min(900px,92vw)}
     dialog::backdrop{background:rgba(0,0,0,.8)}
     dialog img{max-height:86vh;border-radius:18px}
@@ -248,20 +278,20 @@
       .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--green-950);padding:20px;flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.menu-btn{display:block}
       .hero{min-height:800px}.hero-media::after{background:linear-gradient(0deg,rgba(4,48,39,.94),rgba(4,48,39,.38))}.hero-inner{padding-top:110px}
       .hero-meta{grid-template-columns:1fr}.countdown{grid-template-columns:1fr repeat(4,1fr)}.countdown-title{grid-column:1/-1;margin-bottom:8px}
-      .intro-grid,.venue-grid,.reg-grid,.poster-grid,.organizer-grid{grid-template-columns:1fr}
+      .intro-grid,.venue-grid,.reg-grid,.poster-grid,.organizer-grid,.travel-grid{grid-template-columns:1fr}
       .filter-grid{grid-template-columns:1fr 1fr}.activity-grid{grid-template-columns:1fr 1fr}
       .site-map-head{display:block}.site-map-head p{margin-top:10px}
       .organizer-points{grid-template-columns:repeat(3,1fr)}
-      .ticket-grid{grid-template-columns:1fr 1fr}.program-poster-grid{grid-template-columns:1fr 1fr}.speaker-poster-grid{grid-template-columns:repeat(2,1fr)}.speaker-roster{grid-template-columns:1fr 1fr}.org-accordion{grid-template-columns:1fr}.poster-img{max-width:520px}
+      .ticket-grid{grid-template-columns:1fr 1fr}.program-poster-grid{grid-template-columns:1fr 1fr}.program-visual-grid{grid-template-columns:1fr 1fr}.speaker-poster-grid{grid-template-columns:repeat(2,1fr)}.speaker-roster{grid-template-columns:1fr 1fr}.org-accordion{grid-template-columns:1fr}.org-logo-strip{grid-template-columns:1fr 1fr}.poster-img{max-width:520px}
     }
     @media (max-width: 680px){
       .container{width:min(100% - 28px,1160px)}section{padding:68px 0}.section-head{display:block}.section-head p{margin-top:15px}
       h1{font-size:58px}.hero-copy{font-size:17px}.hero-meta{margin-top:30px}
       .countdown{grid-template-columns:repeat(4,1fr)}.count-item b{font-size:26px}.count-item:first-of-type{border-left:0}
       .blob-card{padding:34px;min-height:360px}.blob-card h3{font-size:34px}.stats{grid-template-columns:1fr 1fr}.stat{padding:20px}.stat b{font-size:34px}
-      .event{grid-template-columns:1fr;gap:8px}.pill{justify-self:start}.filter-grid{grid-template-columns:1fr}.filter-footer,.activities-head,.org-details-head{display:block}.filter-clear{margin-top:10px}.activity-grid{grid-template-columns:1fr}.program-poster-grid{grid-template-columns:1fr}.speaker-poster-grid{grid-template-columns:1fr 1fr}.speaker-roster{grid-template-columns:1fr}.org-accordion{grid-template-columns:1fr}
+      .event{grid-template-columns:1fr;gap:8px}.pill{justify-self:start}.filter-grid{grid-template-columns:1fr}.filter-footer,.activities-head,.org-details-head,.program-visuals-head{display:block}.filter-clear{margin-top:10px}.activity-grid{grid-template-columns:1fr}.program-poster-grid{grid-template-columns:1fr}.program-visual-grid{grid-template-columns:1fr}.program-visuals-head p{margin-top:10px}.speaker-poster-grid{grid-template-columns:1fr 1fr}.speaker-roster{grid-template-columns:1fr}.org-accordion{grid-template-columns:1fr}.org-logo-strip{grid-template-columns:1fr}.org-logo-card{grid-template-columns:78px 1fr}.org-logo-card img{width:78px;height:92px}
       .ticket-grid,.included{grid-template-columns:1fr}.ticket.featured{transform:none}.organizer-points{grid-template-columns:1fr}.organizer-story,.support-card{padding:28px}.gallery{grid-template-columns:1fr 1fr}.gallery button{min-height:150px}
-      .poster-copy h2{font-size:42px}.footer-grid{grid-template-columns:1fr}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:6px}
+      .travel-map iframe{height:430px}.poster-copy h2{font-size:42px}.footer-grid{grid-template-columns:1fr}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:6px}
     }
   </style>
 </head>
@@ -273,7 +303,7 @@
       <a class="brand" href="#top"><span class="brand-mark">JÖSz</span><span>VII. Nyári Egyetem<small>2026 • Sástó</small></span></a>
       <button class="menu-btn" aria-label="Menü megnyitása" aria-expanded="false">☰</button>
       <div class="nav-links">
-        <a href="#program">Program</a><a href="#eloadok">Előadók</a><a href="#josz">A JÖSz-ről</a><a href="#jegyek">Jegyek</a><a href="#helyszin">Helyszín</a><a href="#kempingterkep">Térkép</a><a href="#jelentkezes" class="nav-cta">Jelentkezés</a>
+        <a href="#program">Program</a><a href="#eloadok">Előadók</a><a href="#josz">A JÖSz-ről</a><a href="#jegyek">Jegyek</a><a href="#helyszin">Helyszín</a><a href="#odaut">Odaút</a><a href="#kempingterkep">Térkép</a><a href="#jelentkezes" class="nav-cta">Jelentkezés</a>
       </div>
     </nav>
   </div>
@@ -326,7 +356,9 @@
   <section class="program-section" id="program">
     <div class="contours"></div>
     <div class="container" style="position:relative;z-index:1">
-      <div class="section-head"><div><div class="eyebrow">Program</div><h2>Találd meg a neked való programot.</h2></div><p>A program a legfrissebb feltöltött szervezői táblázat alapján készült. Az előadóknál a visszaigazolt résztvevőket tüntetjük fel; Baranyi Krisztina neve a szervezői kérés szerint jelenik meg.</p></div>
+      <div class="section-head"><div><div class="eyebrow">Program</div><h2>Találd meg a neked való programot.</h2></div><p>A három nap programjában szakmai beszélgetések, viták, workshopok és közösségi események váltják egymást. Az előadóknál a visszaigazolt résztvevőket tüntetjük fel.</p></div>
+
+      <a class="program-brand-banner" href="assets/program/brand-banner.png" target="_blank" rel="noopener" aria-label="A VII. JÖSz Nyári Egyetem arculati fejlécének megnyitása"><img src="assets/program/brand-banner.png" alt="VII. JÖSz Nyári Egyetem arculati fejléc" loading="lazy" /></a>
 
       <div class="program-tools" aria-label="Programszűrők">
         <div class="filter-grid">
@@ -393,13 +425,13 @@
               <time>17:00–18:30</time><div><h3>Merre tovább Magyarország?</h3><p class="event-speakers">Contra Vitakör</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill">vita</span>
             </article>
             <article class="event" data-day="sat" data-time="Időpont később" data-location="Pince" data-speakers="" data-type="közösségi program" data-topic="Borkóstoló gasztronómia közösség bor">
-              <time>—</time><div><h3>Borkóstoló</h3><p class="event-speakers">A pontos kezdési időpont a táblázatban még nem szerepel.</p><div class="event-meta"><span class="meta-chip">Helyszín: Pince</span></div></div><span class="pill social">közösségi program</span>
+              <time>—</time><div><h3>Borkóstoló</h3><p class="event-speakers">A pontos kezdési időpont hamarosan.</p><div class="event-meta"><span class="meta-chip">Helyszín: Pince</span></div></div><span class="pill social">közösségi program</span>
             </article>
             <article class="event" data-day="sat" data-time="Időpont később" data-location="Nincs megadva" data-speakers="" data-type="közösségi program" data-topic="Kvíz közösség játék">
-              <time>—</time><div><h3>Kvíz</h3><p class="event-speakers">A pontos kezdési időpont és helyszín a táblázatban még nem szerepel.</p></div><span class="pill social">közösségi program</span>
+              <time>—</time><div><h3>Kvíz</h3><p class="event-speakers">A pontos időpont és helyszín hamarosan.</p></div><span class="pill social">közösségi program</span>
             </article>
             <article class="event" data-day="sat" data-time="Időpont később" data-location="Rendezvénysátor" data-speakers="" data-type="közösségi program" data-topic="Zenélés kárpát-medencei ízek udvara cigányzene zene közösség">
-              <time>—</time><div><h3>Zenélés – Kárpát-medencei ízek udvara</h3><p class="event-speakers">Felkért zenésszel; a pontos kezdési időpont még nem szerepel a táblázatban.</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill social">közösségi program</span>
+              <time>—</time><div><h3>Zenélés – Kárpát-medencei ízek udvara</h3><p class="event-speakers">Felkért zenésszel; a pontos kezdési időpont hamarosan.</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill social">közösségi program</span>
             </article>
           </div>
         </section>
@@ -417,18 +449,33 @@
         </section>
       </div>
       <div class="no-results" id="no-results">Nincs a kiválasztott feltételeknek megfelelő program. Próbálj más szűrést, vagy töröld a szűrőket.</div>
+
+      <div class="program-visuals" aria-labelledby="programgrafikak-cim">
+        <div class="program-visuals-head">
+          <div><div class="eyebrow">Programgrafikák</div><h3 id="programgrafikak-cim">A program egyben és napokra bontva.</h3></div>
+          <p>A grafikákra kattintva teljes méretben is megnyithatod őket.</p>
+        </div>
+        <div class="program-visual-grid">
+          <a class="program-visual-card" href="assets/program/program-overview.png" target="_blank" rel="noopener"><img src="assets/program/program-overview.png" alt="A VII. JÖSz Nyári Egyetem teljes programja" loading="lazy" /></a>
+          <a class="program-visual-card" href="assets/program/program-friday.png" target="_blank" rel="noopener"><img src="assets/program/program-friday.png" alt="Augusztus 28., péntek programgrafikája" loading="lazy" /></a>
+          <a class="program-visual-card" href="assets/program/program-saturday.png" target="_blank" rel="noopener"><img src="assets/program/program-saturday.png" alt="Augusztus 29., szombat programgrafikája" loading="lazy" /></a>
+          <a class="program-visual-card" href="assets/program/program-sunday.png" target="_blank" rel="noopener"><img src="assets/program/program-sunday.png" alt="Augusztus 30., vasárnap programgrafikája" loading="lazy" /></a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="eloadok">
     <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Előadók</div><h2>A VII. JÖSz Nyári Egyetem előadói.</h2></div><p>A feltöltött, posztolható előadói arculati anyagokat is beépítettük az oldalba. A képekre kattintva a grafikák teljes méretben megnyithatók.</p></div>
+      <div class="section-head"><div><div class="eyebrow">Előadók</div><h2>A VII. JÖSz Nyári Egyetem előadói.</h2></div><p>Ismerd meg a VII. JÖSz Nyári Egyetem előadóit és közreműködőit. A portrékra kattintva a grafikák teljes méretben is megnyithatók.</p></div>
 
       <h3 class="speaker-subhead">Kiemelt beszélgetések</h3>
       <div class="program-poster-grid" aria-label="Kiemelt programok előadói grafikái">
         <a class="program-poster" href="assets/speakers/nok-a-politikaban.png" target="_blank" rel="noopener"><img src="assets/speakers/nok-a-politikaban.png" alt="Nők a politikában – Szilas Kincső, Dúró Dóra és Dr. Hegedűs Barbara" loading="lazy" /></a>
         <a class="program-poster" href="assets/speakers/alkotmanyozas-a-kormanyvaltas-utan.png" target="_blank" rel="noopener"><img src="assets/speakers/alkotmanyozas-a-kormanyvaltas-utan.png" alt="Alkotmányozás a kormányváltás után – Dr. Horváth Attila, Dr. Stumpf István és Schiffer András" loading="lazy" /></a>
         <a class="program-poster" href="assets/speakers/jogaink-vedelme-az-online-terben.png" target="_blank" rel="noopener"><img src="assets/speakers/jogaink-vedelme-az-online-terben.png" alt="Jogaink védelme az online térben – Dr. Gosztonyi Gergely, Dr. Menyhárd Attila és Dr. Koltay András" loading="lazy" /></a>
+        <a class="program-poster" href="assets/speakers/onkormanyzatisag-2026-ban.png" target="_blank" rel="noopener"><img src="assets/speakers/onkormanyzatisag-2026-ban.png" alt="Önkormányzatiság 2026-ban – Baranyi Krisztina és Dr. Cser-Palkovics András" loading="lazy" /></a>
+        <a class="program-poster" href="assets/program/contra-vitakor.jpg" target="_blank" rel="noopener"><img src="assets/program/contra-vitakor.jpg" alt="Contra Vitakör – 2026. augusztus 28. és 29." loading="lazy" /></a>
       </div>
 
       <h3 class="speaker-subhead">Előadóink</h3>
@@ -447,15 +494,15 @@
         <a class="speaker-poster" href="assets/speakers/koltay-andras.png" target="_blank" rel="noopener"><img src="assets/speakers/koltay-andras.png" alt="Dr. Koltay András – Jogaink védelme az online térben" loading="lazy" /></a>
         <a class="speaker-poster" href="assets/speakers/gubik-laszlo.png" target="_blank" rel="noopener"><img src="assets/speakers/gubik-laszlo.png" alt="Gubik László – Határon túli magyarok helyzete" loading="lazy" /></a>
         <a class="speaker-poster" href="assets/speakers/brassai-hunor.png" target="_blank" rel="noopener"><img src="assets/speakers/brassai-hunor.png" alt="Brassai Hunor – Határon túli magyarok helyzete" loading="lazy" /></a>
+        <a class="speaker-poster" href="assets/speakers/baranyi-krisztina.png" target="_blank" rel="noopener"><img src="assets/speakers/baranyi-krisztina.png" alt="Baranyi Krisztina – Önkormányzatiság 2026-ban" loading="lazy" /></a>
+        <a class="speaker-poster" href="assets/speakers/cser-palkovics-andras.png" target="_blank" rel="noopener"><img src="assets/speakers/cser-palkovics-andras.png" alt="Dr. Cser-Palkovics András – Önkormányzatiság 2026-ban" loading="lazy" /></a>
       </div>
 
       <h3 class="speaker-subhead">További programközreműködők</h3>
-      <p class="speaker-note">Az alábbi visszaigazolt közreműködőkhöz a feltöltött csomagban nem érkezett külön előadói grafika, ezért szövegesen jelennek meg.</p>
+      <p class="speaker-note"></p>
       <div class="speaker-roster" aria-label="További visszaigazolt közreműködők listája">
         <article class="speaker-card"><div class="speaker-date">Augusztus 28. • péntek</div><h3>Molnár István Dániel</h3><p>Táncház</p><span class="speaker-time">20:00–21:45</span></article>
         <article class="speaker-card"><div class="speaker-date">Augusztus 29. • szombat</div><h3>Almási Zita</h3><p>Work-life balance workshop / stresszkezelés</p><span class="speaker-time">9:30–10:30</span></article>
-        <article class="speaker-card"><div class="speaker-date">Augusztus 30. • vasárnap</div><h3>Cser-Palkovics András</h3><p>Önkormányzatiság 2026-ban</p><span class="speaker-time">10:00–11:30</span></article>
-        <article class="speaker-card"><div class="speaker-date">Augusztus 30. • vasárnap</div><h3>Baranyi Krisztina</h3><p>Önkormányzatiság 2026-ban</p><span class="speaker-time">10:00–11:30</span></article>
       </div>
     </div>
   </section>
@@ -487,6 +534,7 @@
 
         <aside class="support-card" aria-labelledby="tamogatas-cim">
           <div>
+            <img class="support-logo" src="assets/logos/josz-alapitvany.png" alt="Jogászok Önképző Szervezetéért Alapítvány logója" loading="lazy" />
             <div class="eyebrow" style="color:var(--yellow)">Támogatás</div>
             <h3 id="tamogatas-cim">Segítsd a JÖSz munkáját!</h3>
             <p>Ha fontosnak tartod a joghallgatók szakmai fejlődését, a közösségépítést és a JÖSz programjainak folytatását, banki átutalással közvetlenül is támogathatod a főszervező alapítványt.</p>
@@ -503,10 +551,25 @@
         </aside>
       </div>
 
+      <div class="org-logo-strip" aria-label="A JÖSz szervezeti közössége">
+        <article class="org-logo-card">
+          <img src="assets/logos/josz-alapitvany.png" alt="Jogászok Önképző Szervezetéért Alapítvány" loading="lazy" />
+          <div><span class="org-logo-kicker">Főszervezői háttér</span><b>JÖSz Alapítvány</b><p>A szakkollégium, a szakmai programok és a tehetséggondozás stabil szervezeti háttere.</p></div>
+        </article>
+        <article class="org-logo-card">
+          <img src="assets/logos/josz-intezet.png" alt="JÖSz Intézet" loading="lazy" />
+          <div><span class="org-logo-kicker">Tudomány és képzés</span><b>JÖSz Intézet</b><p>Kutatási, oktatási, publikációs és tehetséggondozó tevékenység a jogtudomány szolgálatában.</p></div>
+        </article>
+        <article class="org-logo-card">
+          <img src="assets/logos/josz-alumni.png" alt="JÖSz Alumni" loading="lazy" />
+          <div><span class="org-logo-kicker">Életre szóló közösség</span><b>JÖSz Alumni</b><p>Az egykori tagok szakmai mentorálással, oktatással és közösségi programokkal kapcsolódnak vissza.</p></div>
+        </article>
+      </div>
+
       <div class="org-details" aria-labelledby="josz-reszletesen">
         <div class="org-details-head">
           <div><div class="eyebrow">A JÖSz részletesebben</div><h3 id="josz-reszletesen">Több mint egy szakkollégium.</h3></div>
-          <p>A 2026-os JÖSz bemutatkozó kiadvány alapján összefoglaltuk, hogyan kapcsolódik össze a szakmai képzés, a közösség, a társadalmi felelősségvállalás és a határon túli jelenlét.</p>
+          <p>A JÖSz működésében a szakmai képzés, a közösség, a társadalmi felelősségvállalás és a határon túli jelenlét szorosan összekapcsolódik.</p>
         </div>
         <div class="org-accordion">
           <details open>
@@ -515,7 +578,7 @@
           </details>
           <details>
             <summary>Állam- és jogtudományi pillér</summary>
-            <div class="detail-body"><p>A civilisztika, büntetőjog, nemzetközi és európai jog, valamint közjog területén működő tagozatok kurzusokkal, versenyfelkészítéssel és mentorálással támogatják a hallgatók szakmai fejlődését.</p><p>A képzés a kritikus gondolkodás, az érvelési és szónoki készségek fejlesztésére is hangsúlyt helyez. A kiadvány szerint 2019 óta 20 OTDK-helyezést, 2020 óta pedig több mint 15 rangos nemzetközi és több mint 100 országos versenyeredményt értek el a tagok.</p></div>
+            <div class="detail-body"><p>A civilisztika, büntetőjog, nemzetközi és európai jog, valamint közjog területén működő tagozatok kurzusokkal, versenyfelkészítéssel és mentorálással támogatják a hallgatók szakmai fejlődését.</p><p>A képzés a kritikus gondolkodás, az érvelési és szónoki készségek fejlesztésére is hangsúlyt helyez. 2019 óta a tagok 20 OTDK-helyezést értek el, 2020 óta pedig több mint 15 rangos nemzetközi és több mint 100 országos versenyeredménnyel büszkélkedhetnek.</p></div>
           </details>
           <details>
             <summary>Művelődési pillér</summary>
@@ -523,7 +586,7 @@
           </details>
           <details>
             <summary>Szeretetszolgálati pillér</summary>
-            <div class="detail-body"><p>A JÖSz a jogászi hivatás társadalmi felelősségét is fontosnak tartja. Adománygyűjtések, közösségi akciók és jogsegélyprogram keretében hallgatók szakmai felügyelet mellett segítenek rászorulóknak.</p><p>A szervezet határon túli közösségeket is támogat; a kiadvány többek között kárpátaljai és vajdasági karitatív programokat emel ki.</p></div>
+            <div class="detail-body"><p>A JÖSz a jogászi hivatás társadalmi felelősségét is fontosnak tartja. Adománygyűjtések, közösségi akciók és jogsegélyprogram keretében hallgatók szakmai felügyelet mellett segítenek rászorulóknak.</p><p>A szervezet határon túli közösségeket is támogat, többek között kárpátaljai és vajdasági karitatív programokkal.</p></div>
           </details>
           <details>
             <summary>JÖSz Erdély és JÖSz Vajdaság</summary>
@@ -531,7 +594,7 @@
           </details>
           <details>
             <summary>JÖSz Alumni</summary>
-            <div class="detail-body"><p>A 2017-ben létrehozott Alumni célja, hogy a JÖSz-höz tartozás hosszú távú kapcsolat maradjon. Az alumnusok mentori munkával, oktatással és szakmai tanácsadással segítik az aktív hallgatókat.</p><p>A bemutatkozó kiadvány közel 150 fős Alumni-közösséget említ, saját programokkal, éves Alumni-vacsorával és kötetlen találkozókkal.</p></div>
+            <div class="detail-body"><p>A 2017-ben létrehozott Alumni célja, hogy a JÖSz-höz tartozás hosszú távú kapcsolat maradjon. Az alumnusok mentori munkával, oktatással és szakmai tanácsadással segítik az aktív hallgatókat.</p><p>Az Alumni közel 150 fős közösség, saját programokkal, éves Alumni-vacsorával és kötetlen találkozókkal.</p></div>
           </details>
           <details>
             <summary>JÖSz Intézet, Akadémiák és Könyvtár</summary>
@@ -552,7 +615,7 @@
 
   <section class="tickets" id="jegyek">
     <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Jegyárak</div><h2>Találd meg a neked valót.</h2></div><p>A feltöltött tájékoztató szerinti árak. Hat év alatt a rendezvény ingyenes.</p></div>
+      <div class="section-head"><div><div class="eyebrow">Jegyárak</div><h2>Találd meg a neked valót.</h2></div><p>A részvételi lehetőségek között többféle bérlet és napijegy közül választhatsz. Hat év alatt a rendezvény ingyenes.</p></div>
       <div class="ticket-grid">
         <div class="ticket"><div class="type">Gólyabérlet</div><div class="price">23 000 Ft</div><small>háromnapos bérlet</small></div>
         <div class="ticket featured"><div class="type">JÖSz bérlet</div><div class="price">25 000 Ft</div><small>háromnapos bérlet</small></div>
@@ -566,7 +629,7 @@
       <div class="included">
         <div><b>3 napos bérlet:</b> programok, sportolási és szórakozási lehetőségek</div>
         <div><b>2 éjszaka:</b> szállás a kemping faházaiban, a férőhelyek befizetési sorrendben kerülnek kiosztásra</div>
-        <div><b>Étkezés:</b> a tájékoztató szerint napi három étkezés, érkezéskor vacsora és távozáskor reggeli</div>
+        <div><b>Étkezés:</b> napi három étkezés, érkezéskor vacsora és távozáskor reggeli</div>
       </div>
     </div>
   </section>
@@ -588,7 +651,7 @@
       <div class="activities" id="egyeb-programok">
         <div class="activities-head">
           <div><div class="eyebrow">További lehetőségek a helyszínen</div><h3>Fedezd fel Sástót és a Mátrát.</h3></div>
-          <p>A feltöltött helyszíni arculati anyagok alapján a szakmai programok között is több szabadtéri és közösségi lehetőség vár a környéken.</p>
+          <p>A szakmai programok között is érdemes időt hagyni a környék felfedezésére: Sástó és a Mátra számos szabadtéri és közösségi lehetőséget kínál.</p>
         </div>
         <div class="activity-grid">
           <article class="activity-card"><span class="activity-kicker">Panoráma</span><b>Mátra Libegő</b><p>Libegőzés és hegyi panoráma közvetlenül a kemping közelében.</p></article>
@@ -615,10 +678,35 @@
     </div>
   </section>
 
+  <section class="travel-section" id="odaut">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">Odaút</div><h2>Így jutsz el Sástóra.</h2></div><p>A Mátra Kemping Sástó címe: <strong>3200 Gyöngyös, Farkas út 4.</strong> Budapestről autóval körülbelül 88 km, nagyjából másfél óra az út.</p></div>
+      <div class="travel-grid">
+        <div class="travel-copy">
+          <div class="eyebrow" style="color:var(--orange)">Utazási információk</div>
+          <h3>Tervezd meg előre az érkezést.</h3>
+          <p>Akár autóval, akár tömegközlekedéssel érkezel, az alábbi útvonalterv segít eljutni a Mátra Kemping Sástóhoz.</p>
+          <div class="travel-facts">
+            <div class="travel-fact"><b>Autóval Budapestről</b><span>Kb. 88 km, hozzávetőleg 1,5 óra. Indulás előtt érdemes ellenőrizni az aktuális forgalmi helyzetet.</span></div>
+            <div class="travel-fact"><b>Tömegközlekedéssel</b><span>A térkép a Puskás Ferenc Stadiontól mutat útvonalat a kempinghez.</span></div>
+            <div class="travel-fact"><b>Érkezési cím</b><span>Mátra Kemping Sástó • 3200 Gyöngyös, Farkas út 4.</span></div>
+          </div>
+          <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=M%C3%A1tra+Kemping+S%C3%A1st%C3%B3" target="_blank" rel="noopener">Útvonal megnyitása ↗</a>
+        </div>
+        <div>
+          <div class="travel-map">
+            <iframe title="Útvonal a Puskás Ferenc Stadiontól a Mátra Kemping Sástóhoz" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d687798.7234220627!2d18.869121339240106!3d47.67055674542031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x4741dc99cdec3349%3A0x6a04a4d7aa06a308!2sPusk%C3%A1s%20Ferenc%20Stadion%2C%20Budapest%2C%201146!3m2!1d47.5001353!2d19.1048136!4m5!1s0x47405bf2e44a77a9%3A0x8ace85f7439ebc36!2zTcOhdHJhIEtlbXBpbmcgU8Ohc3TDsywgR3nDtm5necO2cywgRmFya2FzIMO6dCA0LCAzMjAw!3m2!1d47.8441184!2d19.957846999999997!5e0!3m2!1shu!2shu!4v1787579531108!5m2!1shu!2shu" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <p class="travel-note">A menetrendek és menetidők változhatnak, ezért indulás előtt ellenőrizd az aktuális útvonalat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="registration" id="jelentkezes">
     <div class="contours"></div>
     <div class="container reg-grid" style="position:relative;z-index:1">
-      <div><div class="eyebrow" style="color:var(--yellow)">Jelentkezés</div><div class="deadline">Határidő:<br>augusztus 24.</div><p>A regisztráció a szervezők űrlapján történik. Amíg a végleges űrlaplink nincs megadva az oldal kódjában, a kapcsolati gomb e-mailt nyit.</p><a class="btn" style="background:white;color:var(--red);margin-top:10px" href="mailto:nyariegyetem@josz.org?subject=VII.%20J%C3%96Sz%20Ny%C3%A1ri%20Egyetem%20-%20jelentkez%C3%A9s">Kapcsolat a szervezőkkel →</a></div>
+      <div><div class="eyebrow" style="color:var(--yellow)">Jelentkezés</div><div class="deadline">Határidő:<br>augusztus 24.</div><p>A regisztráció a szervezők űrlapján történik. Kérdés esetén írj bátran a szervezőknek.</p><a class="btn" style="background:white;color:var(--red);margin-top:10px" href="mailto:nyariegyetem@josz.org?subject=VII.%20J%C3%96Sz%20Ny%C3%A1ri%20Egyetem%20-%20jelentkez%C3%A9s">Kapcsolat a szervezőkkel →</a></div>
       <div class="reg-steps">
         <div>Az űrlap kitöltésével jelzed a részvételi szándékodat.</div>
         <div>Sikeres rögzítés esetén megerősítő oldalt látsz, majd automatikus e-mail érkezik.</div>
@@ -634,7 +722,7 @@
   <section class="poster-section">
     <div class="container poster-grid">
       <a href="assets/poster-main.jpg" target="_blank" class="poster-img" aria-label="A teljes eseményplakát megnyitása"><img src="assets/poster-main.jpg" alt="A VII. JÖSz Nyári Egyetem teljes információs plakátja" /></a>
-      <div class="poster-copy"><div class="eyebrow" style="color:var(--orange)">Minden egyben</div><h2>Töltsd le vagy nyisd meg a teljes tájékoztatót.</h2><p>Az eredeti eseményplakátot itt is megnyithatod. A naprakész programért a fenti Program szekció az irányadó, amelyet a legfrissebb szervezői táblázat alapján frissítettünk.</p><a class="btn btn-light" href="assets/poster-main.jpg" download>Plakát letöltése</a></div>
+      <div class="poster-copy"><div class="eyebrow" style="color:var(--orange)">Minden egyben</div><h2>Töltsd le vagy nyisd meg a teljes tájékoztatót.</h2><p>A teljes eseményplakátot itt is megnyithatod vagy letöltheted. Az aktuális programot a fenti Program szekcióban találod.</p><a class="btn btn-light" href="assets/poster-main.jpg" download>Plakát letöltése</a></div>
     </div>
   </section>
 </main>
@@ -644,9 +732,9 @@
     <div class="footer-grid">
       <div><div class="footer-title">VII. JÖSz Nyári Egyetem</div><p class="muted">2026. augusztus 28–30. • Mátra Kemping, Sástó</p></div>
       <div><strong>Kapcsolat</strong><p><a href="mailto:nyariegyetem@josz.org">nyariegyetem@josz.org</a></p><p class="muted">A rendezvény nem sajtónyilvános.</p></div>
-      <div><strong>Gyorslinkek</strong><p><a href="#program">Program</a> · <a href="#josz">A JÖSz-ről</a> · <a href="#jegyek">Jegyek</a> · <a href="#helyszin">Helyszín</a> · <a href="#kempingterkep">Térkép</a></p><p><a href="https://josz.org/" target="_blank" rel="noopener">josz.org ↗</a> · <a href="https://matrakemping.hu" target="_blank" rel="noopener">matrakemping.hu ↗</a></p></div>
+      <div><strong>Gyorslinkek</strong><p><a href="#program">Program</a> · <a href="#josz">A JÖSz-ről</a> · <a href="#jegyek">Jegyek</a> · <a href="#helyszin">Helyszín</a> · <a href="#odaut">Odaút</a> · <a href="#kempingterkep">Térkép</a></p><p><a href="https://josz.org/" target="_blank" rel="noopener">josz.org ↗</a> · <a href="https://matrakemping.hu" target="_blank" rel="noopener">matrakemping.hu ↗</a></p></div>
     </div>
-    <div class="footer-bottom"><span>Az oldal a JÖSz VII. Nyári Egyetem feltöltött arculati anyagai alapján készült.</span><span>Programváltozás joga fenntartva.</span></div>
+    <div class="footer-bottom"><span>© 2026 Jogászok Önképző Szervezetéért Alapítvány.</span><span>Programváltozás joga fenntartva.</span></div>
   </div>
 </footer>
 
