@@ -1,15 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="hu">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#064c3d" />
-  <meta name="description" content="VII. JÖSz Nyári Egyetem — 2026. augusztus 28–30., Mátra Kemping, Sástó. Programok, jegyárak, helyszín és jelentkezési információk." />
-  <meta property="og:title" content="VII. JÖSz Nyári Egyetem" />
-  <meta property="og:description" content="2026. augusztus 28–30. • Mátra Kemping, Sástó" />
-  <meta property="og:image" content="assets/hero-bridge.jpg" />
-  <title>VII. JÖSz Nyári Egyetem — 2026</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#064c3d" name="theme-color"/>
+<meta content="VII. JÖSz Nyári Egyetem — 2026. augusztus 28–30., Mátra Kemping, Sástó. Programok, jegyárak, helyszín és jelentkezési információk." name="description"/>
+<meta content="VII. JÖSz Nyári Egyetem" property="og:title"/>
+<meta content="2026. augusztus 28–30. • Mátra Kemping, Sástó" property="og:description"/>
+<meta content="assets/hero-bridge.jpg" property="og:image"/>
+<title>VII. JÖSz Nyári Egyetem — 2026</title>
+<style>
     :root {
       --green-950:#053f34;
       --green-900:#064c3d;
@@ -111,6 +112,18 @@
     .event h3{margin:0;font-size:19px;line-height:1.25}.event p{margin:6px 0 0;color:rgba(255,255,255,.68);font-size:14px}
     .pill{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;background:var(--sage);color:white;padding:6px 10px;border-radius:999px;white-space:nowrap}
     .pill.social{background:var(--red)}
+
+
+    .event-details{margin-top:13px;border-top:1px solid rgba(255,255,255,.12);padding-top:10px}
+    .event-details summary{display:inline-flex;align-items:center;gap:8px;cursor:pointer;list-style:none;color:var(--yellow);font-weight:900;font-size:13px;letter-spacing:.02em;padding:7px 10px;border-radius:10px;background:rgba(255,255,255,.07);transition:background .2s ease,color .2s ease}
+    .event-details summary::-webkit-details-marker{display:none}
+    .event-details summary::after{content:"+";display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.12);color:white;font-size:16px;line-height:1}
+    .event-details[open] summary{background:rgba(255,128,69,.16);color:#fff}
+    .event-details[open] summary::after{content:"–";background:var(--orange)}
+    .event-description{margin-top:12px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.86);font-size:14px;line-height:1.62}
+    .event-description p{margin:0 0 10px}
+    .event-description p:last-child{margin-bottom:0}
+    .program-poster img,.speaker-poster img,.program-visual-card img{background:var(--green-950)}
 
     .program-poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:6px 0 38px}
     .program-poster{display:block;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:var(--green-950);transition:transform .25s ease,box-shadow .25s ease}
@@ -296,450 +309,422 @@
   </style>
 </head>
 <body>
-<a href="#tartalom" class="skip">Ugrás a tartalomra</a>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
 <header>
-  <div class="container">
-    <nav aria-label="Fő navigáció">
-      <a class="brand" href="#top"><span class="brand-mark">JÖSz</span><span>VII. Nyári Egyetem<small>2026 • Sástó</small></span></a>
-      <button class="menu-btn" aria-label="Menü megnyitása" aria-expanded="false">☰</button>
-      <div class="nav-links">
-        <a href="#program">Program</a><a href="#eloadok">Előadók</a><a href="#josz">A JÖSz-ről</a><a href="#jegyek">Jegyek</a><a href="#helyszin">Helyszín</a><a href="#odaut">Odaút</a><a href="#kempingterkep">Térkép</a><a href="#jelentkezes" class="nav-cta">Jelentkezés</a>
-      </div>
-    </nav>
-  </div>
+<div class="container">
+<nav aria-label="Fő navigáció">
+<a class="brand" href="#top"><span class="brand-mark">JÖSz</span><span>VII. Nyári Egyetem<small>2026 • Sástó</small></span></a>
+<button aria-expanded="false" aria-label="Menü megnyitása" class="menu-btn">☰</button>
+<div class="nav-links">
+<a href="#program">Program</a><a href="#eloadok">Előadók</a><a href="#josz">A JÖSz-ről</a><a href="#jegyek">Jegyek</a><a href="#helyszin">Helyszín</a><a href="#odaut">Odaút</a><a href="#kempingterkep">Térkép</a><a class="nav-cta" href="#jelentkezes">Jelentkezés</a>
+</div>
+</nav>
+</div>
 </header>
-
 <main id="tartalom">
-  <section class="hero" id="top">
-    <div class="hero-media"><img src="assets/hero-bridge.jpg" alt="A sástói fahíd és a tó nyári környezetben" /></div>
-    <div class="container hero-inner">
-      <span class="kicker">2026. augusztus 28–30. • Sástó</span>
-      <h1>VII. JÖSz <span class="outline">Nyári Egyetem</span></h1>
-      <p class="hero-copy">Három nap szakmai program, vita, közösség és kikapcsolódás a Mátra szívében. Előadások, workshopok, borkóstoló, tábortűz, túra és csónakázás egy helyen.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#jelentkezes">Jelentkezem →</a>
-        <a class="btn btn-light" href="#program">Megnézem a programot</a>
-      </div>
-      <div class="hero-meta">
-        <div><span>Mikor?</span><strong>2026. augusztus 28–30.</strong></div>
-        <div><span>Hol?</span><strong>Mátra Kemping, Sástó</strong></div>
-        <div><span>Budapesttől</span><strong>kb. 88 km • ~1,5 óra</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="countdown-wrap" aria-label="Visszaszámlálás a rendezvény kezdetéig">
-    <div class="container countdown">
-      <div class="countdown-title">Találkozunk Sástón!</div>
-      <div class="count-item"><b id="days">–</b><span>nap</span></div>
-      <div class="count-item"><b id="hours">–</b><span>óra</span></div>
-      <div class="count-item"><b id="minutes">–</b><span>perc</span></div>
-      <div class="count-item"><b id="seconds">–</b><span>mp</span></div>
-    </div>
-  </div>
-
-  <section>
-    <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Miért érdemes jönni?</div><h2>Nem csak egy konferencia.</h2></div><p>A szakmai témák mellett a hétvége legalább annyira szól a közösségről, új ismeretségekről és a Mátra felfedezéséről.</p></div>
-      <div class="intro-grid">
-        <div class="blob-card"><h3>Tanulj. Vitázz. Kapcsolódj.</h3><p>Jog, közélet, gazdaság, külpolitika és alkotmányosság — közvetlenül olyan előadóktól, akik alakítják a szakmai és közéleti diskurzust.</p></div>
-        <div class="stats">
-          <div class="stat"><b>3 nap</b><span>szakmai és közösségi program</span></div>
-          <div class="stat"><b>2 éj</b><span>szállás a Mátra Kempingben</span></div>
-          <div class="stat"><b>10+</b><span>előadás, vita és workshop</span></div>
-          <div class="stat"><b>1 hely</b><span>tó, erdő, libegő és tábortűz</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="program-section" id="program">
-    <div class="contours"></div>
-    <div class="container" style="position:relative;z-index:1">
-      <div class="section-head"><div><div class="eyebrow">Program</div><h2>Találd meg a neked való programot.</h2></div><p>A három nap programjában szakmai beszélgetések, viták, workshopok és közösségi események váltják egymást. Az előadóknál a visszaigazolt résztvevőket tüntetjük fel.</p></div>
-
-      <a class="program-brand-banner" href="assets/program/brand-banner.png" target="_blank" rel="noopener" aria-label="A VII. JÖSz Nyári Egyetem arculati fejlécének megnyitása"><img src="assets/program/brand-banner.png" alt="VII. JÖSz Nyári Egyetem arculati fejléc" loading="lazy" /></a>
-
-      <div class="program-tools" aria-label="Programszűrők">
-        <div class="filter-grid">
-          <label class="filter-field"><span>Helyszín</span><select id="filter-location"><option value="">Minden helyszín</option></select></label>
-          <label class="filter-field"><span>Előadó</span><select id="filter-speaker"><option value="">Minden előadó</option></select></label>
-          <label class="filter-field"><span>Előadás témája</span><input id="filter-topic" type="search" placeholder="pl. alkotmány, Ukrajna, online…" /></label>
-          <label class="filter-field"><span>Előadás jellege</span><select id="filter-type"><option value="">Minden jelleg</option></select></label>
-          <label class="filter-field"><span>Előadás időpontja</span><select id="filter-time"><option value="">Minden időpont</option></select></label>
-        </div>
-        <div class="filter-footer"><span id="result-count" aria-live="polite">17 program</span><button class="filter-clear" id="clear-filters" type="button">Szűrők törlése</button></div>
-      </div>
-
-      <div class="quick-days" aria-label="Gyors szűrés nap szerint">
-        <button class="quick-day active" type="button" data-day="">Összes nap</button>
-        <button class="quick-day" type="button" data-day="fri">Aug. 28. • Péntek</button>
-        <button class="quick-day" type="button" data-day="sat">Aug. 29. • Szombat</button>
-        <button class="quick-day" type="button" data-day="sun">Aug. 30. • Vasárnap</button>
-      </div>
-
-      <div id="program-groups">
-        <section class="program-day" data-program-day="fri" aria-labelledby="day-fri">
-          <div class="day-title"><h3 id="day-fri">Augusztus 28. • Péntek</h3><span>1. nap</span></div>
-          <div class="timeline">
-            <article class="event" data-day="fri" data-time="15:30–17:00" data-location="Konferenciaterem" data-speakers="" data-type="beszélgetés" data-topic="Energiabiztonság legégetőbb kérdései energia biztonság geopolitika">
-              <time>15:30–17:00</time><div><h3>Energiabiztonság legégetőbb kérdései</h3><p class="event-speakers">Moderátor: Major Kristóf</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div></div><span class="pill">beszélgetés</span>
-            </article>
-            <article class="event" data-day="fri" data-time="17:15–18:15" data-location="Rendezvénysátor" data-speakers="Szilas Kincső|Dúró Dóra|Hegedűs Barbara" data-type="beszélgetés" data-topic="Nők a politikában politika közélet nők">
-              <time>17:15–18:15</time><div><h3>Nők a politikában</h3><p class="event-speakers">Szilas Kincső, Dúró Dóra, Hegedűs Barbara</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill">beszélgetés</span>
-            </article>
-            <article class="event" data-day="fri" data-time="17:15–18:15" data-location="Konferenciaterem" data-speakers="Maróth Miklós" data-type="előadás" data-topic="Kereszténység és iszlám vallás kultúra">
-              <time>17:15–18:15</time><div><h3>Kereszténység és iszlám</h3><p class="event-speakers">Dr. Maróth Miklós professzor</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div></div><span class="pill">előadás</span>
-            </article>
-            <article class="event" data-day="fri" data-time="19:00–20:30" data-location="Nincs megadva" data-speakers="" data-type="vita" data-topic="Contra Vitakör vita közélet">
-              <time>19:00–20:30</time><div><h3>Contra Vitakör</h3><p class="event-speakers">Hallgatói szervezés</p><div class="event-meta"><span class="meta-chip">Helyszín: később</span></div></div><span class="pill">vita</span>
-            </article>
-            <article class="event" data-day="fri" data-time="20:00–21:45" data-location="Színpad" data-speakers="Molnár István Dániel" data-type="közösségi program" data-topic="Táncház kultúra közösség zene tánc">
-              <time>20:00–21:45</time><div><h3>Táncház</h3><p class="event-speakers">Molnár István Dániel</p><div class="event-meta"><span class="meta-chip">Helyszín: Színpad</span></div></div><span class="pill social">közösségi program</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="program-day" data-program-day="sat" aria-labelledby="day-sat">
-          <div class="day-title"><h3 id="day-sat">Augusztus 29. • Szombat</h3><span>2. nap</span></div>
-          <div class="timeline">
-            <article class="event" data-day="sat" data-time="9:30–10:30" data-location="Konferenciaterem" data-speakers="" data-type="workshop" data-topic="CV workshop karrier önéletrajz álláskeresés">
-              <time>9:30–10:30</time><div><h3>CV workshop</h3><p class="event-speakers">Előadó visszaigazolása folyamatban</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div></div><span class="pill">workshop</span>
-            </article>
-            <article class="event" data-day="sat" data-time="9:30–10:30" data-location="Rendezvénysátor" data-speakers="Almási Zita" data-type="workshop" data-topic="Work-life balance workshop stresszkezelés egyensúly jóllét">
-              <time>9:30–10:30</time><div><h3>Work-life balance workshop / stresszkezelés</h3><p class="event-speakers">Almási Zita</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill">workshop</span>
-            </article>
-            <article class="event" data-day="sat" data-time="9:30–10:30" data-location="Rendezvénysátor" data-speakers="" data-type="workshop" data-topic="kézműves workshop vászontáska festés kreatív közösség">
-              <time>9:30–10:30</time><div><h3>Kézműves workshop – vászontáska-festés</h3><p class="event-speakers">JÖSz szervezésében</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill">workshop</span>
-            </article>
-            <article class="event" data-day="sat" data-time="10:45–12:15" data-location="Konferenciaterem" data-speakers="Bendarzsevszkij Anton|Resperger István" data-type="beszélgetés" data-topic="Orosz-ukrán konfliktus és ami utána jön külpolitika biztonságpolitika Ukrajna Oroszország">
-              <time>10:45–12:15</time><div><h3>Orosz–ukrán konfliktus és ami utána jön</h3><p class="event-speakers">Bendarzsevszkij Anton, Resperger István ezredes</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div></div><span class="pill">beszélgetés</span>
-            </article>
-            <article class="event" data-day="sat" data-time="11:15–12:15" data-location="Konferenciaterem" data-speakers="Horváth Attila|Stumpf István|Schiffer András" data-type="beszélgetés" data-topic="Alkotmányozás a kormányváltás után alkotmányjog közjog kormányváltás">
-              <time>11:15–12:15</time><div><h3>Alkotmányozás a kormányváltás után</h3><p class="event-speakers">Horváth Attila alkotmánybíró, Stumpf István, Schiffer András</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div></div><span class="pill">beszélgetés</span>
-            </article>
-            <article class="event" data-day="sat" data-time="15:45–16:45" data-location="Konferenciaterem" data-speakers="Gosztonyi Gergely|Menyhárd Attila|Koltay András" data-type="panelbeszélgetés" data-topic="Jogaink védelme az online térben digitális jog alapjogok internet online">
-              <time>15:45–16:45</time><div><h3>Jogaink védelme az online térben</h3><p class="event-speakers">Gosztonyi Gergely, Menyhárd Attila professzor, Koltay András</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div></div><span class="pill">panelbeszélgetés</span>
-            </article>
-            <article class="event" data-day="sat" data-time="17:00–18:30" data-location="Rendezvénysátor" data-speakers="Contra Vitakör" data-type="vita" data-topic="Merre tovább Magyarország politika közélet Magyarország vita">
-              <time>17:00–18:30</time><div><h3>Merre tovább Magyarország?</h3><p class="event-speakers">Contra Vitakör</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill">vita</span>
-            </article>
-            <article class="event" data-day="sat" data-time="Időpont később" data-location="Pince" data-speakers="" data-type="közösségi program" data-topic="Borkóstoló gasztronómia közösség bor">
-              <time>—</time><div><h3>Borkóstoló</h3><p class="event-speakers">A pontos kezdési időpont hamarosan.</p><div class="event-meta"><span class="meta-chip">Helyszín: Pince</span></div></div><span class="pill social">közösségi program</span>
-            </article>
-            <article class="event" data-day="sat" data-time="Időpont később" data-location="Nincs megadva" data-speakers="" data-type="közösségi program" data-topic="Kvíz közösség játék">
-              <time>—</time><div><h3>Kvíz</h3><p class="event-speakers">A pontos időpont és helyszín hamarosan.</p></div><span class="pill social">közösségi program</span>
-            </article>
-            <article class="event" data-day="sat" data-time="Időpont később" data-location="Rendezvénysátor" data-speakers="" data-type="közösségi program" data-topic="Zenélés kárpát-medencei ízek udvara cigányzene zene közösség">
-              <time>—</time><div><h3>Zenélés – Kárpát-medencei ízek udvara</h3><p class="event-speakers">Felkért zenésszel; a pontos kezdési időpont hamarosan.</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill social">közösségi program</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="program-day" data-program-day="sun" aria-labelledby="day-sun">
-          <div class="day-title"><h3 id="day-sun">Augusztus 30. • Vasárnap</h3><span>3. nap</span></div>
-          <div class="timeline">
-            <article class="event" data-day="sun" data-time="10:00–11:30" data-location="Rendezvénysátor" data-speakers="Gubik László|Brassai Hunor" data-type="beszélgetés" data-topic="Határon túli magyarok helyzete nemzetpolitika külhoni magyarok">
-              <time>10:00–11:30</time><div><h3>Határon túli magyarok helyzete</h3><p class="event-speakers">Gubik László, Brassai Hunor</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div></div><span class="pill">beszélgetés</span>
-            </article>
-            <article class="event" data-day="sun" data-time="10:00–11:30" data-location="Konferenciaterem" data-speakers="Cser-Palkovics András|Baranyi Krisztina" data-type="beszélgetés" data-topic="Önkormányzatiság 2026-ban önkormányzat közjog helyi politika">
-              <time>10:00–11:30</time><div><h3>Önkormányzatiság 2026-ban</h3><p class="event-speakers">Cser-Palkovics András, Baranyi Krisztina</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div></div><span class="pill">beszélgetés</span>
-            </article>
-          </div>
-        </section>
-      </div>
-      <div class="no-results" id="no-results">Nincs a kiválasztott feltételeknek megfelelő program. Próbálj más szűrést, vagy töröld a szűrőket.</div>
-
-      <div class="program-visuals" aria-labelledby="programgrafikak-cim">
-        <div class="program-visuals-head">
-          <div><div class="eyebrow">Programgrafikák</div><h3 id="programgrafikak-cim">A program egyben és napokra bontva.</h3></div>
-          <p>A grafikákra kattintva teljes méretben is megnyithatod őket.</p>
-        </div>
-        <div class="program-visual-grid">
-          <a class="program-visual-card" href="assets/program/program-overview.png" target="_blank" rel="noopener"><img src="assets/program/program-overview.png" alt="A VII. JÖSz Nyári Egyetem teljes programja" loading="lazy" /></a>
-          <a class="program-visual-card" href="assets/program/program-friday.png" target="_blank" rel="noopener"><img src="assets/program/program-friday.png" alt="Augusztus 28., péntek programgrafikája" loading="lazy" /></a>
-          <a class="program-visual-card" href="assets/program/program-saturday.png" target="_blank" rel="noopener"><img src="assets/program/program-saturday.png" alt="Augusztus 29., szombat programgrafikája" loading="lazy" /></a>
-          <a class="program-visual-card" href="assets/program/program-sunday.png" target="_blank" rel="noopener"><img src="assets/program/program-sunday.png" alt="Augusztus 30., vasárnap programgrafikája" loading="lazy" /></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="eloadok">
-    <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Előadók</div><h2>A VII. JÖSz Nyári Egyetem előadói.</h2></div><p>Ismerd meg a VII. JÖSz Nyári Egyetem előadóit és közreműködőit. A portrékra kattintva a grafikák teljes méretben is megnyithatók.</p></div>
-
-      <h3 class="speaker-subhead">Kiemelt beszélgetések</h3>
-      <div class="program-poster-grid" aria-label="Kiemelt programok előadói grafikái">
-        <a class="program-poster" href="assets/speakers/nok-a-politikaban.png" target="_blank" rel="noopener"><img src="assets/speakers/nok-a-politikaban.png" alt="Nők a politikában – Szilas Kincső, Dúró Dóra és Dr. Hegedűs Barbara" loading="lazy" /></a>
-        <a class="program-poster" href="assets/speakers/alkotmanyozas-a-kormanyvaltas-utan.png" target="_blank" rel="noopener"><img src="assets/speakers/alkotmanyozas-a-kormanyvaltas-utan.png" alt="Alkotmányozás a kormányváltás után – Dr. Horváth Attila, Dr. Stumpf István és Schiffer András" loading="lazy" /></a>
-        <a class="program-poster" href="assets/speakers/jogaink-vedelme-az-online-terben.png" target="_blank" rel="noopener"><img src="assets/speakers/jogaink-vedelme-az-online-terben.png" alt="Jogaink védelme az online térben – Dr. Gosztonyi Gergely, Dr. Menyhárd Attila és Dr. Koltay András" loading="lazy" /></a>
-        <a class="program-poster" href="assets/speakers/onkormanyzatisag-2026-ban.png" target="_blank" rel="noopener"><img src="assets/speakers/onkormanyzatisag-2026-ban.png" alt="Önkormányzatiság 2026-ban – Baranyi Krisztina és Dr. Cser-Palkovics András" loading="lazy" /></a>
-        <a class="program-poster" href="assets/program/contra-vitakor.jpg" target="_blank" rel="noopener"><img src="assets/program/contra-vitakor.jpg" alt="Contra Vitakör – 2026. augusztus 28. és 29." loading="lazy" /></a>
-      </div>
-
-      <h3 class="speaker-subhead">Előadóink</h3>
-      <div class="speaker-poster-grid" aria-label="Előadói arculati grafikák">
-        <a class="speaker-poster" href="assets/speakers/szilas-kincso.png" target="_blank" rel="noopener"><img src="assets/speakers/szilas-kincso.png" alt="Szilas Kincső – Nők a politikában" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/duro-dora.png" target="_blank" rel="noopener"><img src="assets/speakers/duro-dora.png" alt="Dúró Dóra – Nők a politikában" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/hegedus-barbara.png" target="_blank" rel="noopener"><img src="assets/speakers/hegedus-barbara.png" alt="Dr. Hegedűs Barbara – Nők a politikában" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/maroth-miklos.png" target="_blank" rel="noopener"><img src="assets/speakers/maroth-miklos.png" alt="Dr. Maróth Miklós – Kereszténység és iszlám" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/bendarzsevszkij-anton.png" target="_blank" rel="noopener"><img src="assets/speakers/bendarzsevszkij-anton.png" alt="Bendarzsevszkij Anton – Orosz–ukrán konfliktus és ami utána jön" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/resperger-istvan.png" target="_blank" rel="noopener"><img src="assets/speakers/resperger-istvan.png" alt="Dr. Resperger István – Orosz–ukrán konfliktus és ami utána jön" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/horvath-attila.png" target="_blank" rel="noopener"><img src="assets/speakers/horvath-attila.png" alt="Dr. Horváth Attila – Alkotmányozás a kormányváltás után" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/stumpf-istvan.png" target="_blank" rel="noopener"><img src="assets/speakers/stumpf-istvan.png" alt="Dr. Stumpf István – Alkotmányozás a kormányváltás után" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/schiffer-andras.png" target="_blank" rel="noopener"><img src="assets/speakers/schiffer-andras.png" alt="Schiffer András – Alkotmányozás a kormányváltás után" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/gosztonyi-gergely.png" target="_blank" rel="noopener"><img src="assets/speakers/gosztonyi-gergely.png" alt="Dr. Gosztonyi Gergely – Jogaink védelme az online térben" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/menyhard-attila.png" target="_blank" rel="noopener"><img src="assets/speakers/menyhard-attila.png" alt="Dr. Menyhárd Attila – Jogaink védelme az online térben" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/koltay-andras.png" target="_blank" rel="noopener"><img src="assets/speakers/koltay-andras.png" alt="Dr. Koltay András – Jogaink védelme az online térben" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/gubik-laszlo.png" target="_blank" rel="noopener"><img src="assets/speakers/gubik-laszlo.png" alt="Gubik László – Határon túli magyarok helyzete" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/brassai-hunor.png" target="_blank" rel="noopener"><img src="assets/speakers/brassai-hunor.png" alt="Brassai Hunor – Határon túli magyarok helyzete" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/baranyi-krisztina.png" target="_blank" rel="noopener"><img src="assets/speakers/baranyi-krisztina.png" alt="Baranyi Krisztina – Önkormányzatiság 2026-ban" loading="lazy" /></a>
-        <a class="speaker-poster" href="assets/speakers/cser-palkovics-andras.png" target="_blank" rel="noopener"><img src="assets/speakers/cser-palkovics-andras.png" alt="Dr. Cser-Palkovics András – Önkormányzatiság 2026-ban" loading="lazy" /></a>
-      </div>
-
-      <h3 class="speaker-subhead">További programközreműködők</h3>
-      <p class="speaker-note"></p>
-      <div class="speaker-roster" aria-label="További visszaigazolt közreműködők listája">
-        <article class="speaker-card"><div class="speaker-date">Augusztus 28. • péntek</div><h3>Molnár István Dániel</h3><p>Táncház</p><span class="speaker-time">20:00–21:45</span></article>
-        <article class="speaker-card"><div class="speaker-date">Augusztus 29. • szombat</div><h3>Almási Zita</h3><p>Work-life balance workshop / stresszkezelés</p><span class="speaker-time">9:30–10:30</span></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="organizer-section" id="josz">
-    <div class="contours"></div>
-    <div class="container" style="position:relative;z-index:1">
-      <div class="section-head">
-        <div><div class="eyebrow">A főszervező</div><h2>Ismerd meg a JÖSz-t.</h2></div>
-        <p>A Nyári Egyetem a Jogászok Önképző Szervezetének hagyományos, többnapos rendezvénye: szakmai beszélgetések, közéleti viták, kulturális programok és közösségi élmények találkozása.</p>
-      </div>
-      <div class="organizer-grid">
-        <article class="organizer-story">
-          <div class="eyebrow">Jogászok Önképző Szervezete</div>
-          <h3>Jogászi tudás, közösség és felelősségvállalás.</h3>
-          <p>A JÖSz 2012-ben, joghallgatói kezdeményezésre alakult, 2020 óta pedig hivatalosan is szakkollégiumként működik. Célja, hogy tagjai a klasszikus jogászi műveltséget magas színvonalon képviseljék, nyitottak legyenek a világ kérdéseire, és a változó körülmények között is tettrekészen tudjanak válaszokat adni.</p>
-          <p>A szervezet három alapvető pillérre épít: az állam- és jogtudományi képzésre, a művelődésre és a szeretetszolgálatra. A JÖSz közössége szakmai kurzusokkal, vitaestekkel, kulturális és közösségi programokkal, valamint társadalmi felelősségvállalási kezdeményezésekkel segíti a joghallgatók fejlődését.</p>
-          <p>A Jogászok Önképző Szervezetéért Alapítvány biztosítja a szervezet működésének szakmai és pénzügyi hátterét; többek között a szakkollégiumot, a jogi akadémiákat, a Studia Pragmatica programot és a határon túli szakmai közösségeket is támogatja.</p>
-          <div class="organizer-points">
-            <div class="organizer-point"><b>2012</b><span>a JÖSz megalakulása</span></div>
-            <div class="organizer-point"><b>2020</b><span>óta hivatalosan szakkollégium</span></div>
-            <div class="organizer-point"><b>170+ / 100+</b><span>jogász és joghallgató mögött stabil alapítványi háttér</span></div>
-          </div>
-          <div class="hero-actions" style="margin-top:28px">
-            <a class="btn btn-light" href="https://josz.org/" target="_blank" rel="noopener">Tovább a JÖSz honlapjára ↗</a>
-            <a class="btn btn-light" href="assets/josz-bemutato-2026.pdf" target="_blank" rel="noopener">Bemutatkozó kiadvány ↗</a>
-          </div>
-        </article>
-
-        <aside class="support-card" aria-labelledby="tamogatas-cim">
-          <div>
-            <img class="support-logo" src="assets/logos/josz-alapitvany.png" alt="Jogászok Önképző Szervezetéért Alapítvány logója" loading="lazy" />
-            <div class="eyebrow" style="color:var(--yellow)">Támogatás</div>
-            <h3 id="tamogatas-cim">Segítsd a JÖSz munkáját!</h3>
-            <p>Ha fontosnak tartod a joghallgatók szakmai fejlődését, a közösségépítést és a JÖSz programjainak folytatását, banki átutalással közvetlenül is támogathatod a főszervező alapítványt.</p>
-            <div class="support-beneficiary">Jogászok Önképző Szervezetéért Alapítvány</div>
-            <div class="account-box">
-              <small>Számlaszám</small>
-              <span class="account-number" id="account-number">10300002-10703764-49020018</span>
-            </div>
-          </div>
-          <div class="support-actions">
-            <button class="btn organizer-link copy-btn" id="copy-account" type="button">Számlaszám másolása</button>
-            <a class="btn btn-light" href="https://josz.org/" target="_blank" rel="noopener">josz.org ↗</a>
-          </div>
-        </aside>
-      </div>
-
-      <div class="org-logo-strip" aria-label="A JÖSz szervezeti közössége">
-        <article class="org-logo-card">
-          <img src="assets/logos/josz-alapitvany.png" alt="Jogászok Önképző Szervezetéért Alapítvány" loading="lazy" />
-          <div><span class="org-logo-kicker">Főszervezői háttér</span><b>JÖSz Alapítvány</b><p>A szakkollégium, a szakmai programok és a tehetséggondozás stabil szervezeti háttere.</p></div>
-        </article>
-        <article class="org-logo-card">
-          <img src="assets/logos/josz-intezet.png" alt="JÖSz Intézet" loading="lazy" />
-          <div><span class="org-logo-kicker">Tudomány és képzés</span><b>JÖSz Intézet</b><p>Kutatási, oktatási, publikációs és tehetséggondozó tevékenység a jogtudomány szolgálatában.</p></div>
-        </article>
-        <article class="org-logo-card">
-          <img src="assets/logos/josz-alumni.png" alt="JÖSz Alumni" loading="lazy" />
-          <div><span class="org-logo-kicker">Életre szóló közösség</span><b>JÖSz Alumni</b><p>Az egykori tagok szakmai mentorálással, oktatással és közösségi programokkal kapcsolódnak vissza.</p></div>
-        </article>
-      </div>
-
-      <div class="org-details" aria-labelledby="josz-reszletesen">
-        <div class="org-details-head">
-          <div><div class="eyebrow">A JÖSz részletesebben</div><h3 id="josz-reszletesen">Több mint egy szakkollégium.</h3></div>
-          <p>A JÖSz működésében a szakmai képzés, a közösség, a társadalmi felelősségvállalás és a határon túli jelenlét szorosan összekapcsolódik.</p>
-        </div>
-        <div class="org-accordion">
-          <details open>
-            <summary>JÖSz Szakkollégium</summary>
-            <div class="detail-body"><p>A JÖSz 2012-ben az ELTE ÁJK hallgatóinak kezdeményezésére alakult, amelyhez hamarosan a PPKE joghallgatói is csatlakoztak. 2020 óta hivatalosan is szakkollégiumként működik.</p><p>Célja, hogy tagjai magas színvonalú klasszikus jogászi műveltséget szerezzenek, nyitottak legyenek a világ kérdéseire, és olyan közösségben fejlődjenek, amely alkalmazkodni tud a változó körülményekhez.</p></div>
-          </details>
-          <details>
-            <summary>Állam- és jogtudományi pillér</summary>
-            <div class="detail-body"><p>A civilisztika, büntetőjog, nemzetközi és európai jog, valamint közjog területén működő tagozatok kurzusokkal, versenyfelkészítéssel és mentorálással támogatják a hallgatók szakmai fejlődését.</p><p>A képzés a kritikus gondolkodás, az érvelési és szónoki készségek fejlesztésére is hangsúlyt helyez. 2019 óta a tagok 20 OTDK-helyezést értek el, 2020 óta pedig több mint 15 rangos nemzetközi és több mint 100 országos versenyeredménnyel büszkélkedhetnek.</p></div>
-          </details>
-          <details>
-            <summary>Művelődési pillér</summary>
-            <div class="detail-body"><p>A művelődési programok a jogi ismereteken túl kulturális és társasági élményeket kínálnak. Kiállítások, színházi programok, önképzések, csapatépítők és közös utazások segítik, hogy a tagok szélesebb látókörrel és erős közösségi kapcsolatokkal gazdagodjanak.</p></div>
-          </details>
-          <details>
-            <summary>Szeretetszolgálati pillér</summary>
-            <div class="detail-body"><p>A JÖSz a jogászi hivatás társadalmi felelősségét is fontosnak tartja. Adománygyűjtések, közösségi akciók és jogsegélyprogram keretében hallgatók szakmai felügyelet mellett segítenek rászorulóknak.</p><p>A szervezet határon túli közösségeket is támogat, többek között kárpátaljai és vajdasági karitatív programokkal.</p></div>
-          </details>
-          <details>
-            <summary>JÖSz Erdély és JÖSz Vajdaság</summary>
-            <div class="detail-body"><p>A JÖSz-Erdély 2023 januárjában jött létre a kolozsvári kurzussorozat folytatásaként, célja az erdélyi magyar joghallgatók összefogása és egyetemen túli szakmai fejlődésük támogatása.</p><p>A vajdasági tagszervezet szegedi és szabadkai kurzusnapokból nőtt ki, és szakmai-közösségi programokkal járul hozzá a Kárpát-medencei magyar joghallgatói közösség építéséhez.</p></div>
-          </details>
-          <details>
-            <summary>JÖSz Alumni</summary>
-            <div class="detail-body"><p>A 2017-ben létrehozott Alumni célja, hogy a JÖSz-höz tartozás hosszú távú kapcsolat maradjon. Az alumnusok mentori munkával, oktatással és szakmai tanácsadással segítik az aktív hallgatókat.</p><p>Az Alumni közel 150 fős közösség, saját programokkal, éves Alumni-vacsorával és kötetlen találkozókkal.</p></div>
-          </details>
-          <details>
-            <summary>JÖSz Intézet, Akadémiák és Könyvtár</summary>
-            <div class="detail-body"><p>A JÖSz Intézet kutatási, kutatástámogató, oktatási és kiadói tevékenységet végez, publikációs felületet és tehetséggondozó programokat biztosít. Az Energia, IT és AI Akadémiák a jog és más szakterületek találkozásában adnak gyakorlati, naprakész tudást.</p><p>A JÖSz Könyvtár a szakkollégisták és kutatók tudományos munkáját támogatja hazai és külföldi jogtudományi, társadalomtudományi és egyetemi szakirodalommal.</p></div>
-          </details>
-          <details>
-            <summary>Studia Pragmatica</summary>
-            <div class="detail-body"><p>A 2022-ben létrehozott Studia Pragmatica a joghallgatók gyakorlati tapasztalatszerzését segítő program. A résztvevők partner ügyvédi irodákban, mentorálás mellett dolgozhatnak valódi ügyeken, az egyetemi időbeosztáshoz igazítható munkarendben.</p></div>
-          </details>
-          <details>
-            <summary>Nyári Egyetem</summary>
-            <div class="detail-body"><p>A Nyári Egyetem a JÖSz életében már hagyománynak számító többnapos rendezvénysorozat. Jogszakmai beszélgetések, közéleti viták, kulturális és közösségi programok adnak lehetőséget arra, hogy a résztvevők betekintsenek a JÖSz mindennapjaiba, közben tudást és kapcsolatokat szerezzenek.</p><p>A rendezvény nemcsak szakkollégistáknak és joghallgatóknak szól: minden érdeklődőt vár.</p></div>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="tickets" id="jegyek">
-    <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Jegyárak</div><h2>Találd meg a neked valót.</h2></div><p>A részvételi lehetőségek között többféle bérlet és napijegy közül választhatsz. Hat év alatt a rendezvény ingyenes.</p></div>
-      <div class="ticket-grid">
-        <div class="ticket"><div class="type">Gólyabérlet</div><div class="price">23 000 Ft</div><small>háromnapos bérlet</small></div>
-        <div class="ticket featured"><div class="type">JÖSz bérlet</div><div class="price">25 000 Ft</div><small>háromnapos bérlet</small></div>
-        <div class="ticket"><div class="type">Normál bérlet</div><div class="price">35 000 Ft</div><small>háromnapos bérlet</small></div>
-        <div class="ticket"><div class="type">Támogatói jegy</div><div class="price">50 000 Ft</div><small>támogatói konstrukció</small></div>
-        <div class="ticket"><div class="type">Napi jegy • szállás nélkül</div><div class="price">12 000 Ft</div></div>
-        <div class="ticket"><div class="type">Napi jegy • szállással</div><div class="price">25 000 Ft</div></div>
-        <div class="ticket"><div class="type">Családi napi jegy</div><div class="price">23 000 Ft</div><small>2 felnőtt + 1 vagy 2 gyermek</small></div>
-        <div class="ticket"><div class="type">Családi bérlet</div><div class="price">55 000 Ft</div><small>2 felnőtt + 1 vagy 2 gyermek</small></div>
-      </div>
-      <div class="included">
-        <div><b>3 napos bérlet:</b> programok, sportolási és szórakozási lehetőségek</div>
-        <div><b>2 éjszaka:</b> szállás a kemping faházaiban, a férőhelyek befizetési sorrendben kerülnek kiosztásra</div>
-        <div><b>Étkezés:</b> napi három étkezés, érkezéskor vacsora és távozáskor reggeli</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="helyszin">
-    <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Helyszín</div><h2>Mátra Kemping, Sástó.</h2></div><p>Faházak, tópart, erdő és közösségi terek — mindez közvetlenül a Mátra egyik legismertebb kirándulóhelyén.</p></div>
-      <div class="venue-grid">
-        <div class="venue-main"><img src="assets/camp-aerial.jpg" alt="Légi felvétel a Mátra Kempingről" /><div class="label"><b>Mátra Kemping Sástó</b><span>Libegő • panoráma • túraútvonalak • csónakázás • tűzrakóhelyek</span></div></div>
-        <div class="gallery">
-          <button data-img="assets/chairlift.jpg" aria-label="Libegő képének megnyitása"><img src="assets/chairlift.jpg" alt="Libegő a Mátrában" /><span class="tag">Libegő</span></button>
-          <button data-img="assets/lake-park.jpg" aria-label="Sástó park képének megnyitása"><img src="assets/lake-park.jpg" alt="A Sástó körüli park" /><span class="tag">Sétányok</span></button>
-          <button data-img="assets/boats.jpg" aria-label="Csónakok képének megnyitása"><img src="assets/boats.jpg" alt="Csónakok a Sástón" /><span class="tag">Csónakázás</span></button>
-          <button data-img="assets/cabins.jpg" aria-label="Faházak képének megnyitása"><img src="assets/cabins.jpg" alt="Faházak a Mátra Kempingben" /><span class="tag">Faházak</span></button>
-          <button data-img="assets/fireplace.jpg" aria-label="Tűzrakóhely képének megnyitása"><img src="assets/fireplace.jpg" alt="Fedett közösségi tér és tűzrakóhely" /><span class="tag">Tábortűz</span></button>
-          <button data-img="assets/wine-cellar.jpg" aria-label="Pince képének megnyitása"><img src="assets/wine-cellar.jpg" alt="Hangulatos pince és közösségi tér" /><span class="tag">Borkóstoló</span></button>
-        </div>
-      </div>
-      <div class="activities" id="egyeb-programok">
-        <div class="activities-head">
-          <div><div class="eyebrow">További lehetőségek a helyszínen</div><h3>Fedezd fel Sástót és a Mátrát.</h3></div>
-          <p>A szakmai programok között is érdemes időt hagyni a környék felfedezésére: Sástó és a Mátra számos szabadtéri és közösségi lehetőséget kínál.</p>
-        </div>
-        <div class="activity-grid">
-          <article class="activity-card"><span class="activity-kicker">Panoráma</span><b>Mátra Libegő</b><p>Libegőzés és hegyi panoráma közvetlenül a kemping közelében.</p></article>
-          <article class="activity-card"><span class="activity-kicker">Természet</span><b>Álomszép túraútvonalak</b><p>Erdei kirándulóösvények és mátrai túrák rövidebb vagy hosszabb szabadidős blokkokhoz.</p></article>
-          <article class="activity-card"><span class="activity-kicker">Vízpart</span><b>Csónakázás a Sástón</b><p>A központi tavon csónakázással is ki lehet kapcsolódni a programok között.</p></article>
-          <article class="activity-card"><span class="activity-kicker">Pihenés</span><b>Tóparti park és sétányok</b><p>Zöld, zegzugos park, sétányok és pihenőhelyek veszik körbe a tavat.</p></article>
-          <article class="activity-card"><span class="activity-kicker">Közösség</span><b>Tűzrakóhelyek</b><p>Szabadtéri pihenők és tűzrakóhelyek adnak teret a közös esti programoknak.</p></article>
-          <article class="activity-card"><span class="activity-kicker">Közösségi terek</span><b>Fedett pihenők és pince</b><p>A kemping fedett közösségi terekkel és hangulatos pincével is rendelkezik.</p></article>
-        </div>
-      </div>
-
-      <div class="site-map" id="kempingterkep">
-        <div class="site-map-head">
-          <div><div class="eyebrow">Kempingtérkép</div><h3>Találd meg könnyen a helyszíneket.</h3></div>
-          <p>A térképen külön jelölve vannak a rendezvényhelyszínek, a szállások, a mosdók és az egyéb fontos pontok. Kattints a térképre a nagyításhoz.</p>
-        </div>
-        <button data-img="assets/kemping-terkep.jpeg" aria-label="A Mátra Kemping rendezvénytérképének megnyitása nagy méretben"><img src="assets/kemping-terkep.jpeg" alt="A Mátra Kemping Sástó rendezvénytérképe, jelölt helyszínekkel és szállásokkal" /></button>
-        <p class="site-map-note">A kemping területén 5 km/h sebességkorlátozás van érvényben.</p>
-      </div>
-      <div class="hero-actions" style="margin-top:24px">
-        <a class="btn btn-primary" href="https://matrakemping.hu" target="_blank" rel="noopener">Mátra Kemping honlapja ↗</a>
-        <a class="btn" style="border-color:var(--green-900)" href="https://www.google.com/maps/search/?api=1&query=M%C3%A1tra+Kemping+S%C3%A1st%C3%B3" target="_blank" rel="noopener">Megnyitás térképen</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="travel-section" id="odaut">
-    <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Odaút</div><h2>Így jutsz el Sástóra.</h2></div><p>A Mátra Kemping Sástó címe: <strong>3200 Gyöngyös, Farkas út 4.</strong> Budapestről autóval körülbelül 88 km, nagyjából másfél óra az út.</p></div>
-      <div class="travel-grid">
-        <div class="travel-copy">
-          <div class="eyebrow" style="color:var(--orange)">Utazási információk</div>
-          <h3>Tervezd meg előre az érkezést.</h3>
-          <p>Akár autóval, akár tömegközlekedéssel érkezel, az alábbi útvonalterv segít eljutni a Mátra Kemping Sástóhoz.</p>
-          <div class="travel-facts">
-            <div class="travel-fact"><b>Autóval Budapestről</b><span>Kb. 88 km, hozzávetőleg 1,5 óra. Indulás előtt érdemes ellenőrizni az aktuális forgalmi helyzetet.</span></div>
-            <div class="travel-fact"><b>Tömegközlekedéssel</b><span>A térkép a Puskás Ferenc Stadiontól mutat útvonalat a kempinghez.</span></div>
-            <div class="travel-fact"><b>Érkezési cím</b><span>Mátra Kemping Sástó • 3200 Gyöngyös, Farkas út 4.</span></div>
-          </div>
-          <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=M%C3%A1tra+Kemping+S%C3%A1st%C3%B3" target="_blank" rel="noopener">Útvonal megnyitása ↗</a>
-        </div>
-        <div>
-          <div class="travel-map">
-            <iframe title="Útvonal a Puskás Ferenc Stadiontól a Mátra Kemping Sástóhoz" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d687798.7234220627!2d18.869121339240106!3d47.67055674542031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x4741dc99cdec3349%3A0x6a04a4d7aa06a308!2sPusk%C3%A1s%20Ferenc%20Stadion%2C%20Budapest%2C%201146!3m2!1d47.5001353!2d19.1048136!4m5!1s0x47405bf2e44a77a9%3A0x8ace85f7439ebc36!2zTcOhdHJhIEtlbXBpbmcgU8Ohc3TDsywgR3nDtm5necO2cywgRmFya2FzIMO6dCA0LCAzMjAw!3m2!1d47.8441184!2d19.957846999999997!5e0!3m2!1shu!2shu!4v1787579531108!5m2!1shu!2shu" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
-          <p class="travel-note">A menetrendek és menetidők változhatnak, ezért indulás előtt ellenőrizd az aktuális útvonalat.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="registration" id="jelentkezes">
-    <div class="contours"></div>
-    <div class="container reg-grid" style="position:relative;z-index:1">
-      <div><div class="eyebrow" style="color:var(--yellow)">Jelentkezés</div><div class="deadline">Határidő:<br>augusztus 24.</div><p>A regisztráció a szervezők űrlapján történik. Kérdés esetén írj bátran a szervezőknek.</p><a class="btn" style="background:white;color:var(--red);margin-top:10px" href="mailto:nyariegyetem@josz.org?subject=VII.%20J%C3%96Sz%20Ny%C3%A1ri%20Egyetem%20-%20jelentkez%C3%A9s">Kapcsolat a szervezőkkel →</a></div>
-      <div class="reg-steps">
-        <div>Az űrlap kitöltésével jelzed a részvételi szándékodat.</div>
-        <div>Sikeres rögzítés esetén megerősítő oldalt látsz, majd automatikus e-mail érkezik.</div>
-        <div>A szervezők e-mailben visszajeleznek a regisztráció sikeréről és a fizetés módjáról.</div>
-        <div>A regisztráció a részvételi díj befizetésével és a szállásfoglalás visszaigazolásával válik véglegessé.</div>
-        <div>Egy űrlapon egyszerre egy személy jelentkezhet; a regisztráció nem átruházható.</div>
-        <div>A helyszíni regisztrációhoz hozz magaddal fényképes igazolványt.</div>
-        <p class="reg-note">Kapcsolat: <a href="mailto:nyariegyetem@josz.org"><strong>nyariegyetem@josz.org</strong></a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="poster-section">
-    <div class="container poster-grid">
-      <a href="assets/poster-main.jpg" target="_blank" class="poster-img" aria-label="A teljes eseményplakát megnyitása"><img src="assets/poster-main.jpg" alt="A VII. JÖSz Nyári Egyetem teljes információs plakátja" /></a>
-      <div class="poster-copy"><div class="eyebrow" style="color:var(--orange)">Minden egyben</div><h2>Töltsd le vagy nyisd meg a teljes tájékoztatót.</h2><p>A teljes eseményplakátot itt is megnyithatod vagy letöltheted. Az aktuális programot a fenti Program szekcióban találod.</p><a class="btn btn-light" href="assets/poster-main.jpg" download>Plakát letöltése</a></div>
-    </div>
-  </section>
+<section class="hero" id="top">
+<div class="hero-media"><img alt="A sástói fahíd és a tó nyári környezetben" src="assets/hero-bridge.jpg"/></div>
+<div class="container hero-inner">
+<span class="kicker">2026. augusztus 28–30. • Sástó</span>
+<h1>VII. JÖSz <span class="outline">Nyári Egyetem</span></h1>
+<p class="hero-copy">Három nap szakmai program, vita, közösség és kikapcsolódás a Mátra szívében. Előadások, workshopok, borkóstoló, tábortűz, túra és csónakázás egy helyen.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#jelentkezes">Jelentkezem →</a>
+<a class="btn btn-light" href="#program">Megnézem a programot</a>
+</div>
+<div class="hero-meta">
+<div><span>Mikor?</span><strong>2026. augusztus 28–30.</strong></div>
+<div><span>Hol?</span><strong>Mátra Kemping, Sástó</strong></div>
+<div><span>Budapesttől</span><strong>kb. 88 km • ~1,5 óra</strong></div>
+</div>
+</div>
+</section>
+<div aria-label="Visszaszámlálás a rendezvény kezdetéig" class="countdown-wrap">
+<div class="container countdown">
+<div class="countdown-title">Találkozunk Sástón!</div>
+<div class="count-item"><b id="days">–</b><span>nap</span></div>
+<div class="count-item"><b id="hours">–</b><span>óra</span></div>
+<div class="count-item"><b id="minutes">–</b><span>perc</span></div>
+<div class="count-item"><b id="seconds">–</b><span>mp</span></div>
+</div>
+</div>
+<section>
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Miért érdemes jönni?</div><h2>Nem csak egy konferencia.</h2></div><p>A szakmai témák mellett a hétvége legalább annyira szól a közösségről, új ismeretségekről és a Mátra felfedezéséről.</p></div>
+<div class="intro-grid">
+<div class="blob-card"><h3>Tanulj. Vitázz. Kapcsolódj.</h3><p>Jog, közélet, gazdaság, külpolitika és alkotmányosság — közvetlenül olyan előadóktól, akik alakítják a szakmai és közéleti diskurzust.</p></div>
+<div class="stats">
+<div class="stat"><b>3 nap</b><span>szakmai és közösségi program</span></div>
+<div class="stat"><b>2 éj</b><span>szállás a Mátra Kempingben</span></div>
+<div class="stat"><b>10+</b><span>előadás, vita és workshop</span></div>
+<div class="stat"><b>1 hely</b><span>tó, erdő, libegő és tábortűz</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="program-section" id="program">
+<div class="contours"></div>
+<div class="container" style="position:relative;z-index:1">
+<div class="section-head"><div><div class="eyebrow">Program</div><h2>Találd meg a neked való programot.</h2></div><p>A három nap programjában szakmai beszélgetések, viták, workshopok és közösségi események váltják egymást. Az előadóknál a visszaigazolt résztvevőket tüntetjük fel.</p></div>
+<a aria-label="A VII. JÖSz Nyári Egyetem arculati fejlécének megnyitása" class="program-brand-banner" href="assets/program/brand-banner.png" rel="noopener" target="_blank"><img alt="VII. JÖSz Nyári Egyetem arculati fejléc" decoding="async" loading="eager" src="assets/program/brand-banner.png"/></a>
+<div aria-label="Programszűrők" class="program-tools">
+<div class="filter-grid">
+<label class="filter-field"><span>Helyszín</span><select id="filter-location"><option value="">Minden helyszín</option></select></label>
+<label class="filter-field"><span>Előadó</span><select id="filter-speaker"><option value="">Minden előadó</option></select></label>
+<label class="filter-field"><span>Előadás témája</span><input id="filter-topic" placeholder="pl. alkotmány, Ukrajna, online…" type="search"/></label>
+<label class="filter-field"><span>Előadás jellege</span><select id="filter-type"><option value="">Minden jelleg</option></select></label>
+<label class="filter-field"><span>Előadás időpontja</span><select id="filter-time"><option value="">Minden időpont</option></select></label>
+</div>
+<div class="filter-footer"><span aria-live="polite" id="result-count">17 program</span><button class="filter-clear" id="clear-filters" type="button">Szűrők törlése</button></div>
+</div>
+<div aria-label="Gyors szűrés nap szerint" class="quick-days">
+<button class="quick-day active" data-day="" type="button">Összes nap</button>
+<button class="quick-day" data-day="fri" type="button">Aug. 28. • Péntek</button>
+<button class="quick-day" data-day="sat" type="button">Aug. 29. • Szombat</button>
+<button class="quick-day" data-day="sun" type="button">Aug. 30. • Vasárnap</button>
+</div>
+<div id="program-groups">
+<section aria-labelledby="day-fri" class="program-day" data-program-day="fri">
+<div class="day-title"><h3 id="day-fri">Augusztus 28. • Péntek</h3><span>1. nap</span></div>
+<div class="timeline">
+<article class="event" data-day="fri" data-location="Konferenciaterem" data-speakers="" data-time="15:30–17:00" data-topic="Energiabiztonság legégetőbb kérdései energia biztonság geopolitika" data-type="beszélgetés">
+<time>15:30–17:00</time><div><h3>Energiabiztonság legégetőbb kérdései</h3><p class="event-speakers">Moderátor: Major Kristóf</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Mitől függ ma Magyarország és Európa energiaellátásának biztonsága? Milyen áron biztosítható a stabil ellátás, és milyen mozgástere marad egy közepes méretű országnak a nagyhatalmi energiapolitikai küzdelmek közepette?</p><p>A VII. JÖSz Nyári Egyetem nyitóbeszélgetése az energiabiztonság legsürgetőbb kérdéseit járja körül: az ellátási útvonalak diverzifikálását, a függőségek csökkentésének lehetőségeit és költségeit, az atomenergia és a megújuló források szerepét az energiamixben, valamint az uniós szabályozás hatásait a hazai árakra és versenyképességre.</p><p>Szó lesz arról is, hogy milyen infrastrukturális fejlesztésekre lenne szükség, mennyire reális a régiós együttműködés, és hogyan egyeztethető össze a klímapolitikai átállás az ellátásbiztonsággal és a megfizethetőséggel.</p></div></details></div><span class="pill">beszélgetés</span>
+</article>
+<article class="event" data-day="fri" data-location="Rendezvénysátor" data-speakers="Szilas Kincső|Dúró Dóra|Hegedűs Barbara" data-time="17:15–18:15" data-topic="Nők a politikában politika közélet nők" data-type="beszélgetés">
+<time>17:15–18:15</time><div><h3>Nők a politikában</h3><p class="event-speakers">Szilas Kincső, Dúró Dóra, Hegedűs Barbara</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Milyen lehetőségei és kihívásai vannak a nőknek a magyar politikában? Milyen tapasztalatokkal jár a közéleti szerepvállalás, és milyen hatással lehet a nők jelenléte a politikai döntéshozatalra?</p><p>A VII. JÖSz Nyári Egyetemen három, a közéletben aktív szereplő járja körül a témát:</p><p>Dúró Dóra – országgyűlési képviselő</p><p>Szilas Kincső – politikus</p><p>Hegedűs Barbara – politikus</p><p>A „Nők a politikában" című kerekasztal-beszélgetésen többek között arra keressük a választ, hogy milyen út vezet a politikai szerepvállalásig, milyen kihívásokkal találkozhatnak a nők a közéletben, és milyen szerepet tölthetnek be a magyar politikai élet formálásában.</p><p>A beszélgetés során különböző tapasztalatok és nézőpontok találkoznak, így a résztvevők személyes élményeiken és közéleti munkájukon keresztül is betekintést adnak a politikai szerepvállalás világába.</p></div></details></div><span class="pill">beszélgetés</span>
+</article>
+<article class="event" data-day="fri" data-location="Konferenciaterem" data-speakers="Maróth Miklós" data-time="17:15–18:15" data-topic="Kereszténység és iszlám vallás kultúra" data-type="előadás">
+<time>17:15–18:15</time><div><h3>Kereszténység és iszlám</h3><p class="event-speakers">Dr. Maróth Miklós professzor</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Két világvallás, évszázadokon átívelő találkozások – a VII. JÖSz Nyári Egyetemen a kereszténység és az iszlám kapcsolatáról hallhatunk előadást.</p><p>A rendezvény nyitónapjának előadója Dr. Maróth Miklós, klasszika-filológus, orientalista, egyetemi tanár, a Magyar Tudományos Akadémia rendes tagja és korábbi alelnöke. Kutatásainak középpontjában az ókori görög és a keleti művelődés kapcsolódási pontjai, különösen a filozófia és az arab tudományosság állnak.</p><p>Meghatározó szerepet vállalt a Pázmány Péter Katolikus Egyetem Bölcsészettudományi Karának megszervezésében, majd 1992 és 1999 között annak dékánjaként tevékenykedett.</p><p>Előadásában a kereszténység és az iszlám történelmi, kulturális és szellemi kapcsolatait járja körül.</p></div></details></div><span class="pill">előadás</span>
+</article>
+<article class="event" data-day="fri" data-location="Nincs megadva" data-speakers="" data-time="19:00–20:30" data-topic="Contra Vitakör vita közélet" data-type="vita">
+<time>19:00–20:30</time><div><h3>Contra Vitakör</h3><p class="event-speakers">Hallgatói szervezés</p><div class="event-meta"><span class="meta-chip">Helyszín: később</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>A Contra Vitakör egy olyan közösség, amelyet azért hoztunk létre, hogy teret adjunk a kulturált vitázásnak és a különböző nézőpontok megismerésének. Hiszünk abban, hogy a jó vita nem a másik fél legyőzéséről szól, hanem arról, hogy megtanuljunk érvelni, kérdezni, meghallgatni egymást, és közben mi magunk is fejlődjünk.</p><p>A nyitónap estéjén strukturált vitaformában mérhetik össze érveiket a jelentkezők: a felszólalók előre kiosztott álláspontokat képviselnek, felkészülési idő után pedig moderált keretek között ütköztetik gondolataikat. A hangsúly az érvelési technikán, a gyors gondolkodáson és a másik fél állításainak pontos megértésén van.</p><p>A programra mindenkit várunk, aki szeretné fejleszteni retorikai és vitakészségét – előzetes tapasztalat nem szükséges.</p></div></details></div><span class="pill">vita</span>
+</article>
+<article class="event" data-day="fri" data-location="Színpad" data-speakers="Molnár István Dániel" data-time="20:00–21:45" data-topic="Táncház kultúra közösség zene tánc" data-type="közösségi program">
+<time>20:00–21:45</time><div><h3>Táncház</h3><p class="event-speakers">Molnár István Dániel</p><div class="event-meta"><span class="meta-chip">Helyszín: Színpad</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>A nyitónap estéje a magyar néptánc jegyében telik. A táncházban a résztvevők oktató vezetésével sajátíthatják el a legismertebb táncok alaplépéseit.</p><p>A táncházat Molnár István Dániel vezeti, aki fokozatosan, a legegyszerűbb motívumoktól indulva tanítja a lépéseket – így azok is bátran becsatlakozhatnak, akik most először próbálják ki magukat a táncparketten.</p><p>A program célja a közös élmény és a kötetlen kikapcsolódás: nincs kötelező tudás, csak jókedv és mozgás.</p></div></details></div><span class="pill social">közösségi program</span>
+</article>
+</div>
+</section>
+<section aria-labelledby="day-sat" class="program-day" data-program-day="sat">
+<div class="day-title"><h3 id="day-sat">Augusztus 29. • Szombat</h3><span>2. nap</span></div>
+<div class="timeline">
+<article class="event" data-day="sat" data-location="Konferenciaterem" data-speakers="" data-time="9:30–10:30" data-topic="CV workshop karrier önéletrajz álláskeresés" data-type="workshop">
+<time>9:30–10:30</time><div><h3>CV workshop</h3><p class="event-speakers">Előadó visszaigazolása folyamatban</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Mitől lesz egy önéletrajz meggyőző, és mi az, amit egy HR-es az első harminc másodpercben keres benne? A workshop gyakorlati segítséget nyújt azoknak, akik most lépnek a munkaerőpiacra vagy épp váltás előtt állnak.</p><p>A foglalkozás során szó lesz az önéletrajz felépítéséről és formai követelményeiről, a tapasztalatok és készségek hatékony bemutatásáról, a motivációs levél szerepéről, valamint a leggyakoribb hibákról, amelyek miatt egy pályázat elakad a szűrésen.</p><p>A résztvevők konkrét példákon keresztül, interaktív formában dolgozhatnak saját anyagaikon, ezért érdemes magaddal hozni a meglévő önéletrajzodat.</p></div></details></div><span class="pill">workshop</span>
+</article>
+<article class="event" data-day="sat" data-location="Rendezvénysátor" data-speakers="Almási Zita" data-time="9:30–10:30" data-topic="Work-life balance workshop stresszkezelés egyensúly jóllét" data-type="workshop">
+<time>9:30–10:30</time><div><h3>Work-life balance workshop / stresszkezelés</h3><p class="event-speakers">Almási Zita</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Létezik-e egyáltalán stresszmentes élet? És ha nem, hogyan tanulhatunk meg együtt élni a hullámokkal ahelyett, hogy elárasztanának minket?</p><p>A VII. JÖSz Nyári Egyetem pszichoedukációs workshopja Almási Zita vezetésével a stresszkezelés gyakorlati oldalát járja körül. A foglalkozás azzal indul, hogy leszámol modern korunk mítoszaival: szó lesz a stressz „hasznáról" és káros hatásairól, valamint arról, miért vezet zsákutcába az elkerülés és a rumináció ördögi köre.</p><p>A második blokk az önismeretről szól: a Holmes–Rahe Életesemény és Stressz Skála segítségével a résztvevők feltérképezhetik saját stresszforrásaikat, egy gyakorlat során pedig felidéznek egy korábbi, kevésbé megterhelő stresszes élethelyzetet – például egy vizsgát –, és tudatosítják, milyen fizikai és mentális tünetekkel reagált rá a testük. Ennek felismerése a prevenció első lépése.</p><p>A harmadik rész a work-life balance kérdését állítja középpontba: hogyan hagyható otthon – vagy éppen a munkahelyen – a stressz? Itt kerül szóba a zsilipelés technikája, a határhúzás fontossága és a mindennapi rítusok szerepe.</p><p>A workshop leghosszabb, gyakorlati blokkjában a résztvevők konkrét eszközöket kapnak a kézbe: légzéstechnikát és szomatikus gyakorlatokat, „safe place" imaginációs gyakorlatot, valamint az erőforrás-kerék rajzos gyakorlatát, amellyel mindenki megkeresheti a saját belső erőforrásait. A foglalkozást rövid, irányított meditáció zárja.</p></div></details></div><span class="pill">workshop</span>
+</article>
+<article class="event" data-day="sat" data-location="Rendezvénysátor" data-speakers="" data-time="9:30–10:30" data-topic="kézműves workshop vászontáska festés kreatív közösség" data-type="workshop">
+<time>9:30–10:30</time><div><h3>Kézműves workshop – vászontáska-festés</h3><p class="event-speakers">JÖSz szervezésében</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Kreatív kikapcsolódás a délelőtti programok mellé: a workshopon a résztvevők saját tervezésű mintát festhetnek egy vászontáskára, amelyet aztán haza is vihetnek.</p><p>Az alapanyagokat – táskát, textilfestéket és eszközöket – biztosítjuk, előzetes rajztudásra nincs szükség. A minta lehet egyszerű grafikai motívum, felirat vagy épp a nyári egyetem emléke: a képzeletnek nem szabunk határt.</p><p>A program remek alkalom arra, hogy a résztvevők egy kis alkotómunkával kapcsolódjanak ki, és egyedi emlékkel térjenek haza a VII. JÖSz Nyári Egyetemről.</p></div></details></div><span class="pill">workshop</span>
+</article>
+<article class="event" data-day="sat" data-location="Konferenciaterem" data-speakers="Bendarzsevszkij Anton|Resperger István" data-time="10:45–12:15" data-topic="Orosz-ukrán konfliktus és ami utána jön külpolitika biztonságpolitika Ukrajna Oroszország" data-type="beszélgetés">
+<time>10:45–12:15</time><div><h3>Orosz–ukrán konfliktus és ami utána jön</h3><p class="event-speakers">Bendarzsevszkij Anton, Resperger István ezredes</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Hogyan alakulhat az orosz–ukrán háború, és milyen következményekkel számolhatunk a konfliktus lezárása után? Milyen hatással lehet a háború kimenetele Európa biztonságára és a nemzetközi erőviszonyokra?</p><p>A VII. JÖSz Nyári Egyetemen két elismert szakértő járja körül a témát:</p><p>Bendarzsevszkij Anton – geopolitikai elemző, a Danube Institute geopolitikai igazgatója</p><p>Resperger István – biztonságpolitikai szakértő, egyetemi tanár</p><p>Az „Orosz–ukrán konfliktus és ami utána jön" című beszélgetésben szó lesz többek között Európa biztonságpolitikai helyzetéről, a nagyhatalmi érdekek alakulásáról, valamint arról, hogy milyen új kihívásokkal és lehetőségekkel kell számolni a háború után.</p></div></details></div><span class="pill">beszélgetés</span>
+</article>
+<article class="event" data-day="sat" data-location="Konferenciaterem" data-speakers="Horváth Attila|Stumpf István|Schiffer András" data-time="11:15–12:15" data-topic="Alkotmányozás a kormányváltás után alkotmányjog közjog kormányváltás" data-type="beszélgetés">
+<time>11:15–12:15</time><div><h3>Alkotmányozás a kormányváltás után</h3><p class="event-speakers">Horváth Attila alkotmánybíró, Stumpf István, Schiffer András</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Merre tart a magyar alkotmányosság?</p><p>A VII. JÖSz Nyári Egyetemen három elismert szakember járja körül a témát:</p><p>Prof. Dr. Stumpf István – Széchenyi-díjas alkotmányjogász, politológus és egyetemi tanár, korábbi miniszter és alkotmánybíró</p><p>Prof. Dr. Horváth Attila – alkotmánybíró, jogtörténész és egyetemi tanár</p><p>Schiffer András – ügyvéd, volt országgyűlési képviselő</p><p>Az „Alkotmányozás a kormányváltás után" című kerekasztal-beszélgetésen arra keressük a választ, hogy milyen jogi és politikai kihívásokkal nézhet szembe Magyarország, és mekkora mozgástér áll rendelkezésre az alkotmányos berendezkedés alakítására.</p></div></details></div><span class="pill">beszélgetés</span>
+</article>
+<article class="event" data-day="sat" data-location="Konferenciaterem" data-speakers="Gosztonyi Gergely|Menyhárd Attila|Koltay András" data-time="15:45–16:45" data-topic="Jogaink védelme az online térben digitális jog alapjogok internet online" data-type="panelbeszélgetés">
+<time>15:45–16:45</time><div><h3>Jogaink védelme az online térben</h3><p class="event-speakers">Gosztonyi Gergely, Menyhárd Attila professzor, Koltay András</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Merre tart a szabályozás? Az online világban való jelenlétünk többé nem csupán technológiai kérdés, hanem mindennapi jogaink védelmének új csataterévé vált. A digitális nyilvánosság, a közösségi platformok algoritmusai és a mesterséges intelligencia terjedése olyan jogi kihívásokat hozott felszínre, amelyekre a hagyományos jogi keretek már nem nyújtanak teljes körű választ.</p><p>A VII. JÖSz Nyári Egyetemen három elismert szakértő járja körül a témát:</p><p>Dr. Menyhárd Attila – a polgári jog és a joggazdaságtan elismert kutatójaként a technológiai fejlődés magánjogi és felelősségi kérdéseit elemzi</p><p>Dr. Gosztonyi Gergely – az online véleménynyilvánítás, a platformszabályozás és a digitális alapjogok szakértője</p><p>Dr. Koltay András – a médiaszabályozás és a szellemi tulajdonjog területének kiemelkedő alakja</p></div></details></div><span class="pill">panelbeszélgetés</span>
+</article>
+<article class="event" data-day="sat" data-location="Rendezvénysátor" data-speakers="Contra Vitakör" data-time="17:00–18:30" data-topic="Merre tovább Magyarország politika közélet Magyarország vita" data-type="vita">
+<time>17:00–18:30</time><div><h3>Merre tovább Magyarország?</h3><p class="event-speakers">Contra Vitakör</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>A Contra Vitakör egy olyan közösség, amelyet azért hoztunk létre, hogy teret adjunk a kulturált vitázásnak és a különböző nézőpontok megismerésének. Hiszünk abban, hogy a jó vita nem a másik fél legyőzéséről szól, hanem arról, hogy megtanuljunk érvelni, kérdezni, meghallgatni egymást, és közben mi magunk is fejlődjünk.</p><p>A nyári egyetem második vitakörén egy konkrét, sarkalatos kérdés kerül terítékre: milyen irányba induljon el az ország a következő években? A felszólalók előre kijelölt álláspontokat képviselnek, és moderált keretek között ütköztetik érveiket Magyarország gazdasági, társadalmi és külpolitikai jövőjéről.</p><p>A cél, hogy a hallgatóság több nézőpontból, ütköztetve hallhassa az érveket, és maga alkothasson véleményt. A program nyitott: bárki becsatlakozhat hallgatóként vagy – jelentkezés alapján – vitázóként is.</p></div></details></div><span class="pill">vita</span>
+</article>
+<article class="event" data-day="sat" data-location="Pince" data-speakers="" data-time="Időpont később" data-topic="Borkóstoló gasztronómia közösség bor" data-type="közösségi program">
+<time>—</time><div><h3>Borkóstoló</h3><p class="event-speakers">A pontos kezdési időpont hamarosan.</p><div class="event-meta"><span class="meta-chip">Helyszín: Pince</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>A szombat estét borkóstolóval zárjuk a pincében, ahol a résztvevők szakavatott vezetéssel ismerkedhetnek meg néhány jellegzetes magyar borvidék tételeivel.</p><p>A kóstoló során szó lesz a fajtákról és a borvidékek sajátosságairól, a kóstolás alapjairól, valamint arról, hogyan érdemes leírni és felismerni egy bor jellemzőit. A program kötetlen beszélgetésre és ismerkedésre is alkalmat ad a nyári egyetem résztvevői között.</p><p>A programon való részvétel 18 éven felüli résztvevőink számára biztosított.</p></div></details></div><span class="pill social">közösségi program</span>
+</article>
+<article class="event" data-day="sat" data-location="Nincs megadva" data-speakers="" data-time="Időpont később" data-topic="Kvíz közösség játék" data-type="közösségi program">
+<time>—</time><div><h3>Kvíz</h3><p class="event-speakers">A pontos időpont és helyszín hamarosan.</p><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Csapatos kvízjátékra várunk mindenkit, ahol a kérdések a legkülönbözőbb területeket érintik – történelem, közélet, popkultúra, sport és tudomány –, így minden csapatban jól jön a sokszínű tudás.</p><p>A nap előadásaihoz kapcsolódó kérdések is felbukkannak, így annak sincs hátránya, aki figyelmesen hallgatta a délelőtti programokat.</p><p>A játék kötetlen hangulatban zajlik, csapatokat a helyszínen is lehet alakítani, a legjobban teljesítőket pedig jutalom várja.</p></div></details></div><span class="pill social">közösségi program</span>
+</article>
+<article class="event" data-day="sat" data-location="Rendezvénysátor" data-speakers="" data-time="Időpont később" data-topic="Zenélés kárpát-medencei ízek udvara cigányzene zene közösség" data-type="közösségi program">
+<time>—</time><div><h3>Zenélés – Kárpát-medencei ízek udvara</h3><p class="event-speakers">Felkért zenésszel; a pontos kezdési időpont hamarosan.</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>A szombat este a Kárpát-medence zenei sokszínűségéé: felkért zenészünk játéka mellett a régió ízeivel és hagyományaival is megismerkedhetnek a résztvevők.</p><p>A cigányzene évszázadok óta elválaszthatatlan része a magyar és a Kárpát-medencei zenei hagyománynak – a program ezt az élő, közösségteremtő muzsikát hozza el a nyári egyetemre.</p><p>Kötetlen, oldott hangulatú este, ahol a zene, az ételek és a beszélgetés együtt adja a program lényegét.</p></div></details></div><span class="pill social">közösségi program</span>
+</article>
+</div>
+</section>
+<section aria-labelledby="day-sun" class="program-day" data-program-day="sun">
+<div class="day-title"><h3 id="day-sun">Augusztus 30. • Vasárnap</h3><span>3. nap</span></div>
+<div class="timeline">
+<article class="event" data-day="sun" data-location="Rendezvénysátor" data-speakers="Gubik László|Brassai Hunor" data-time="10:00–11:30" data-topic="Határon túli magyarok helyzete nemzetpolitika külhoni magyarok" data-type="beszélgetés">
+<time>10:00–11:30</time><div><h3>Határon túli magyarok helyzete</h3><p class="event-speakers">Gubik László, Brassai Hunor</p><div class="event-meta"><span class="meta-chip">Helyszín: Rendezvénysátor</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Milyen kérdések határozzák meg ma a külhoni magyarság mindennapjait? Hogyan őrizhető meg a nemzeti identitás és a közösségi összetartozás a változó társadalmi és politikai környezetben?</p><p>A VII. JÖSz Nyári Egyetemen a külhoni magyar közélet két aktív szereplője járja körül a témát:</p><p>Gubik László – felvidéki magyar közéleti szereplő</p><p>Brassai Hunor – erdélyi magyar közéleti szereplő</p><p>A beszélgetésen szó lesz az anyanyelvi oktatás helyzetéről, a szórványosodás és az elvándorlás kihívásairól, a magyar–magyar kapcsolattartás formáiról, valamint arról, milyen szerepet vállalhat a fiatal generáció a külhoni magyar közösségek megtartásában.</p><p>A két eltérő régióból érkező vendég saját közösségének tapasztalatain keresztül mutatja be a különbségeket és a közös pontokat.</p></div></details></div><span class="pill">beszélgetés</span>
+</article>
+<article class="event" data-day="sun" data-location="Konferenciaterem" data-speakers="Cser-Palkovics András|Baranyi Krisztina" data-time="10:00–11:30" data-topic="Önkormányzatiság 2026-ban önkormányzat közjog helyi politika" data-type="beszélgetés">
+<time>10:00–11:30</time><div><h3>Önkormányzatiság 2026-ban</h3><p class="event-speakers">Cser-Palkovics András, Baranyi Krisztina</p><div class="event-meta"><span class="meta-chip">Helyszín: Konferenciaterem</span></div><details class="event-details"><summary>Leírás megnyitása</summary><div class="event-description"><p>Milyen mozgástere maradt a magyar önkormányzatoknak? Hogyan lehet várost vezetni szűkülő források és bővülő feladatok mellett, és mit hozhatnak a következő évek a helyi közösségek életében?</p><p>A VII. JÖSz Nyári Egyetemen két városvezető járja körül a témát:</p><p>Cser-Palkovics András – Székesfehérvár polgármestere</p><p>Baranyi Krisztina – Budapest IX. kerületének polgármestere</p><p>Az „Önkormányzatiság 2026-ban" című beszélgetésen szó lesz az önkormányzati finanszírozás helyzetéről, a helyi adók és az elvonások kérdéséről, a központi kormányzat és a települések viszonyáról, valamint arról, hogy milyen szerepet tölthet be az önkormányzatiság a magyar közéletben a következő időszakban.</p><p>A két, eltérő politikai hátterű városvezető saját gyakorlati tapasztalatain keresztül mutatja be, milyen kihívásokkal néznek szembe a magyar települések.</p></div></details></div><span class="pill">beszélgetés</span>
+</article>
+</div>
+</section>
+</div>
+<div class="no-results" id="no-results">Nincs a kiválasztott feltételeknek megfelelő program. Próbálj más szűrést, vagy töröld a szűrőket.</div>
+<div aria-labelledby="programgrafikak-cim" class="program-visuals">
+<div class="program-visuals-head">
+<div><div class="eyebrow">Programgrafikák</div><h3 id="programgrafikak-cim">A program egyben és napokra bontva.</h3></div>
+<p>A grafikákra kattintva teljes méretben is megnyithatod őket.</p>
+</div>
+<div class="program-visual-grid">
+<a class="program-visual-card" href="assets/program/program-overview.png" rel="noopener" target="_blank"><img alt="A VII. JÖSz Nyári Egyetem teljes programja" decoding="async" loading="eager" src="assets/program/program-overview.png"/></a>
+<a class="program-visual-card" href="assets/program/program-friday.png" rel="noopener" target="_blank"><img alt="Augusztus 28., péntek programgrafikája" decoding="async" loading="eager" src="assets/program/program-friday.png"/></a>
+<a class="program-visual-card" href="assets/program/program-saturday.png" rel="noopener" target="_blank"><img alt="Augusztus 29., szombat programgrafikája" decoding="async" loading="eager" src="assets/program/program-saturday.png"/></a>
+<a class="program-visual-card" href="assets/program/program-sunday.png" rel="noopener" target="_blank"><img alt="Augusztus 30., vasárnap programgrafikája" decoding="async" loading="eager" src="assets/program/program-sunday.png"/></a>
+</div>
+</div>
+</div>
+</section>
+<section id="eloadok">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Előadók</div><h2>A VII. JÖSz Nyári Egyetem előadói.</h2></div><p>Ismerd meg a VII. JÖSz Nyári Egyetem előadóit és közreműködőit. A portrékra kattintva a grafikák teljes méretben is megnyithatók.</p></div>
+<h3 class="speaker-subhead">Kiemelt beszélgetések</h3>
+<div aria-label="Kiemelt programok előadói grafikái" class="program-poster-grid">
+<a class="program-poster" href="assets/speakers/nok-a-politikaban.png" rel="noopener" target="_blank"><img alt="Nők a politikában – Szilas Kincső, Dúró Dóra és Dr. Hegedűs Barbara" decoding="async" loading="eager" src="assets/speakers/nok-a-politikaban.png"/></a>
+<a class="program-poster" href="assets/speakers/alkotmanyozas-a-kormanyvaltas-utan.png" rel="noopener" target="_blank"><img alt="Alkotmányozás a kormányváltás után – Dr. Horváth Attila, Dr. Stumpf István és Schiffer András" decoding="async" loading="eager" src="assets/speakers/alkotmanyozas-a-kormanyvaltas-utan.png"/></a>
+<a class="program-poster" href="assets/speakers/jogaink-vedelme-az-online-terben.png" rel="noopener" target="_blank"><img alt="Jogaink védelme az online térben – Dr. Gosztonyi Gergely, Dr. Menyhárd Attila és Dr. Koltay András" decoding="async" loading="eager" src="assets/speakers/jogaink-vedelme-az-online-terben.png"/></a>
+<a class="program-poster" href="assets/speakers/onkormanyzatisag-2026-ban.png" rel="noopener" target="_blank"><img alt="Önkormányzatiság 2026-ban – Baranyi Krisztina és Dr. Cser-Palkovics András" decoding="async" loading="eager" src="assets/speakers/onkormanyzatisag-2026-ban.png"/></a>
+<a class="program-poster" href="assets/program/contra-vitakor.jpg" rel="noopener" target="_blank"><img alt="Contra Vitakör – 2026. augusztus 28. és 29." decoding="async" loading="eager" src="assets/program/contra-vitakor.jpg"/></a>
+</div>
+<h3 class="speaker-subhead">Előadóink</h3>
+<div aria-label="Előadói arculati grafikák" class="speaker-poster-grid">
+<a class="speaker-poster" href="assets/speakers/szilas-kincso.png" rel="noopener" target="_blank"><img alt="Szilas Kincső – Nők a politikában" decoding="async" loading="eager" src="assets/speakers/szilas-kincso.png"/></a>
+<a class="speaker-poster" href="assets/speakers/duro-dora.png" rel="noopener" target="_blank"><img alt="Dúró Dóra – Nők a politikában" decoding="async" loading="eager" src="assets/speakers/duro-dora.png"/></a>
+<a class="speaker-poster" href="assets/speakers/hegedus-barbara.png" rel="noopener" target="_blank"><img alt="Dr. Hegedűs Barbara – Nők a politikában" decoding="async" loading="eager" src="assets/speakers/hegedus-barbara.png"/></a>
+<a class="speaker-poster" href="assets/speakers/maroth-miklos.png" rel="noopener" target="_blank"><img alt="Dr. Maróth Miklós – Kereszténység és iszlám" decoding="async" loading="eager" src="assets/speakers/maroth-miklos.png"/></a>
+<a class="speaker-poster" href="assets/speakers/bendarzsevszkij-anton.png" rel="noopener" target="_blank"><img alt="Bendarzsevszkij Anton – Orosz–ukrán konfliktus és ami utána jön" decoding="async" loading="eager" src="assets/speakers/bendarzsevszkij-anton.png"/></a>
+<a class="speaker-poster" href="assets/speakers/resperger-istvan.png" rel="noopener" target="_blank"><img alt="Dr. Resperger István – Orosz–ukrán konfliktus és ami utána jön" decoding="async" loading="eager" src="assets/speakers/resperger-istvan.png"/></a>
+<a class="speaker-poster" href="assets/speakers/horvath-attila.png" rel="noopener" target="_blank"><img alt="Dr. Horváth Attila – Alkotmányozás a kormányváltás után" decoding="async" loading="eager" src="assets/speakers/horvath-attila.png"/></a>
+<a class="speaker-poster" href="assets/speakers/stumpf-istvan.png" rel="noopener" target="_blank"><img alt="Dr. Stumpf István – Alkotmányozás a kormányváltás után" decoding="async" loading="eager" src="assets/speakers/stumpf-istvan.png"/></a>
+<a class="speaker-poster" href="assets/speakers/schiffer-andras.png" rel="noopener" target="_blank"><img alt="Schiffer András – Alkotmányozás a kormányváltás után" decoding="async" loading="eager" src="assets/speakers/schiffer-andras.png"/></a>
+<a class="speaker-poster" href="assets/speakers/gosztonyi-gergely.png" rel="noopener" target="_blank"><img alt="Dr. Gosztonyi Gergely – Jogaink védelme az online térben" decoding="async" loading="eager" src="assets/speakers/gosztonyi-gergely.png"/></a>
+<a class="speaker-poster" href="assets/speakers/menyhard-attila.png" rel="noopener" target="_blank"><img alt="Dr. Menyhárd Attila – Jogaink védelme az online térben" decoding="async" loading="eager" src="assets/speakers/menyhard-attila.png"/></a>
+<a class="speaker-poster" href="assets/speakers/koltay-andras.png" rel="noopener" target="_blank"><img alt="Dr. Koltay András – Jogaink védelme az online térben" decoding="async" loading="eager" src="assets/speakers/koltay-andras.png"/></a>
+<a class="speaker-poster" href="assets/speakers/gubik-laszlo.png" rel="noopener" target="_blank"><img alt="Gubik László – Határon túli magyarok helyzete" decoding="async" loading="eager" src="assets/speakers/gubik-laszlo.png"/></a>
+<a class="speaker-poster" href="assets/speakers/brassai-hunor.png" rel="noopener" target="_blank"><img alt="Brassai Hunor – Határon túli magyarok helyzete" decoding="async" loading="eager" src="assets/speakers/brassai-hunor.png"/></a>
+<a class="speaker-poster" href="assets/speakers/baranyi-krisztina.png" rel="noopener" target="_blank"><img alt="Baranyi Krisztina – Önkormányzatiság 2026-ban" decoding="async" loading="eager" src="assets/speakers/baranyi-krisztina.png"/></a>
+<a class="speaker-poster" href="assets/speakers/cser-palkovics-andras.png" rel="noopener" target="_blank"><img alt="Dr. Cser-Palkovics András – Önkormányzatiság 2026-ban" decoding="async" loading="eager" src="assets/speakers/cser-palkovics-andras.png"/></a>
+</div>
+<h3 class="speaker-subhead">További programközreműködők</h3>
+<p class="speaker-note"></p>
+<div aria-label="További visszaigazolt közreműködők listája" class="speaker-roster">
+<article class="speaker-card"><div class="speaker-date">Augusztus 28. • péntek</div><h3>Molnár István Dániel</h3><p>Táncház</p><span class="speaker-time">20:00–21:45</span></article>
+<article class="speaker-card"><div class="speaker-date">Augusztus 29. • szombat</div><h3>Almási Zita</h3><p>Work-life balance workshop / stresszkezelés</p><span class="speaker-time">9:30–10:30</span></article>
+</div>
+</div>
+</section>
+<section class="organizer-section" id="josz">
+<div class="contours"></div>
+<div class="container" style="position:relative;z-index:1">
+<div class="section-head">
+<div><div class="eyebrow">A főszervező</div><h2>Ismerd meg a JÖSz-t.</h2></div>
+<p>A Nyári Egyetem a Jogászok Önképző Szervezetének hagyományos, többnapos rendezvénye: szakmai beszélgetések, közéleti viták, kulturális programok és közösségi élmények találkozása.</p>
+</div>
+<div class="organizer-grid">
+<article class="organizer-story">
+<div class="eyebrow">Jogászok Önképző Szervezete</div>
+<h3>Jogászi tudás, közösség és felelősségvállalás.</h3>
+<p>A JÖSz 2012-ben, joghallgatói kezdeményezésre alakult, 2020 óta pedig hivatalosan is szakkollégiumként működik. Célja, hogy tagjai a klasszikus jogászi műveltséget magas színvonalon képviseljék, nyitottak legyenek a világ kérdéseire, és a változó körülmények között is tettrekészen tudjanak válaszokat adni.</p>
+<p>A szervezet három alapvető pillérre épít: az állam- és jogtudományi képzésre, a művelődésre és a szeretetszolgálatra. A JÖSz közössége szakmai kurzusokkal, vitaestekkel, kulturális és közösségi programokkal, valamint társadalmi felelősségvállalási kezdeményezésekkel segíti a joghallgatók fejlődését.</p>
+<p>A Jogászok Önképző Szervezetéért Alapítvány biztosítja a szervezet működésének szakmai és pénzügyi hátterét; többek között a szakkollégiumot, a jogi akadémiákat, a Studia Pragmatica programot és a határon túli szakmai közösségeket is támogatja.</p>
+<div class="organizer-points">
+<div class="organizer-point"><b>2012</b><span>a JÖSz megalakulása</span></div>
+<div class="organizer-point"><b>2020</b><span>óta hivatalosan szakkollégium</span></div>
+<div class="organizer-point"><b>170+ / 100+</b><span>jogász és joghallgató mögött stabil alapítványi háttér</span></div>
+</div>
+<div class="hero-actions" style="margin-top:28px">
+<a class="btn btn-light" href="https://josz.org/" rel="noopener" target="_blank">Tovább a JÖSz honlapjára ↗</a>
+<a class="btn btn-light" href="assets/josz-bemutato-2026.pdf" rel="noopener" target="_blank">Bemutatkozó kiadvány ↗</a>
+</div>
+</article>
+<aside aria-labelledby="tamogatas-cim" class="support-card">
+<div>
+<img alt="Jogászok Önképző Szervezetéért Alapítvány logója" class="support-logo" decoding="async" loading="eager" src="assets/logos/josz-alapitvany.png"/>
+<div class="eyebrow" style="color:var(--yellow)">Támogatás</div>
+<h3 id="tamogatas-cim">Segítsd a JÖSz munkáját!</h3>
+<p>Ha fontosnak tartod a joghallgatók szakmai fejlődését, a közösségépítést és a JÖSz programjainak folytatását, banki átutalással közvetlenül is támogathatod a főszervező alapítványt.</p>
+<div class="support-beneficiary">Jogászok Önképző Szervezetéért Alapítvány</div>
+<div class="account-box">
+<small>Számlaszám</small>
+<span class="account-number" id="account-number">10300002-10703764-49020018</span>
+</div>
+</div>
+<div class="support-actions">
+<button class="btn organizer-link copy-btn" id="copy-account" type="button">Számlaszám másolása</button>
+<a class="btn btn-light" href="https://josz.org/" rel="noopener" target="_blank">josz.org ↗</a>
+</div>
+</aside>
+</div>
+<div aria-label="A JÖSz szervezeti közössége" class="org-logo-strip">
+<article class="org-logo-card">
+<img alt="Jogászok Önképző Szervezetéért Alapítvány" decoding="async" loading="eager" src="assets/logos/josz-alapitvany.png"/>
+<div><span class="org-logo-kicker">Főszervezői háttér</span><b>JÖSz Alapítvány</b><p>A szakkollégium, a szakmai programok és a tehetséggondozás stabil szervezeti háttere.</p></div>
+</article>
+<article class="org-logo-card">
+<img alt="JÖSz Intézet" decoding="async" loading="eager" src="assets/logos/josz-intezet.png"/>
+<div><span class="org-logo-kicker">Tudomány és képzés</span><b>JÖSz Intézet</b><p>Kutatási, oktatási, publikációs és tehetséggondozó tevékenység a jogtudomány szolgálatában.</p></div>
+</article>
+<article class="org-logo-card">
+<img alt="JÖSz Alumni" decoding="async" loading="eager" src="assets/logos/josz-alumni.png"/>
+<div><span class="org-logo-kicker">Életre szóló közösség</span><b>JÖSz Alumni</b><p>Az egykori tagok szakmai mentorálással, oktatással és közösségi programokkal kapcsolódnak vissza.</p></div>
+</article>
+</div>
+<div aria-labelledby="josz-reszletesen" class="org-details">
+<div class="org-details-head">
+<div><div class="eyebrow">A JÖSz részletesebben</div><h3 id="josz-reszletesen">Több mint egy szakkollégium.</h3></div>
+<p>A JÖSz működésében a szakmai képzés, a közösség, a társadalmi felelősségvállalás és a határon túli jelenlét szorosan összekapcsolódik.</p>
+</div>
+<div class="org-accordion">
+<details open="">
+<summary>JÖSz Szakkollégium</summary>
+<div class="detail-body"><p>A JÖSz 2012-ben az ELTE ÁJK hallgatóinak kezdeményezésére alakult, amelyhez hamarosan a PPKE joghallgatói is csatlakoztak. 2020 óta hivatalosan is szakkollégiumként működik.</p><p>Célja, hogy tagjai magas színvonalú klasszikus jogászi műveltséget szerezzenek, nyitottak legyenek a világ kérdéseire, és olyan közösségben fejlődjenek, amely alkalmazkodni tud a változó körülményekhez.</p></div>
+</details>
+<details>
+<summary>Állam- és jogtudományi pillér</summary>
+<div class="detail-body"><p>A civilisztika, büntetőjog, nemzetközi és európai jog, valamint közjog területén működő tagozatok kurzusokkal, versenyfelkészítéssel és mentorálással támogatják a hallgatók szakmai fejlődését.</p><p>A képzés a kritikus gondolkodás, az érvelési és szónoki készségek fejlesztésére is hangsúlyt helyez. 2019 óta a tagok 20 OTDK-helyezést értek el, 2020 óta pedig több mint 15 rangos nemzetközi és több mint 100 országos versenyeredménnyel büszkélkedhetnek.</p></div>
+</details>
+<details>
+<summary>Művelődési pillér</summary>
+<div class="detail-body"><p>A művelődési programok a jogi ismereteken túl kulturális és társasági élményeket kínálnak. Kiállítások, színházi programok, önképzések, csapatépítők és közös utazások segítik, hogy a tagok szélesebb látókörrel és erős közösségi kapcsolatokkal gazdagodjanak.</p></div>
+</details>
+<details>
+<summary>Szeretetszolgálati pillér</summary>
+<div class="detail-body"><p>A JÖSz a jogászi hivatás társadalmi felelősségét is fontosnak tartja. Adománygyűjtések, közösségi akciók és jogsegélyprogram keretében hallgatók szakmai felügyelet mellett segítenek rászorulóknak.</p><p>A szervezet határon túli közösségeket is támogat, többek között kárpátaljai és vajdasági karitatív programokkal.</p></div>
+</details>
+<details>
+<summary>JÖSz Erdély és JÖSz Vajdaság</summary>
+<div class="detail-body"><p>A JÖSz-Erdély 2023 januárjában jött létre a kolozsvári kurzussorozat folytatásaként, célja az erdélyi magyar joghallgatók összefogása és egyetemen túli szakmai fejlődésük támogatása.</p><p>A vajdasági tagszervezet szegedi és szabadkai kurzusnapokból nőtt ki, és szakmai-közösségi programokkal járul hozzá a Kárpát-medencei magyar joghallgatói közösség építéséhez.</p></div>
+</details>
+<details>
+<summary>JÖSz Alumni</summary>
+<div class="detail-body"><p>A 2017-ben létrehozott Alumni célja, hogy a JÖSz-höz tartozás hosszú távú kapcsolat maradjon. Az alumnusok mentori munkával, oktatással és szakmai tanácsadással segítik az aktív hallgatókat.</p><p>Az Alumni közel 150 fős közösség, saját programokkal, éves Alumni-vacsorával és kötetlen találkozókkal.</p></div>
+</details>
+<details>
+<summary>JÖSz Intézet, Akadémiák és Könyvtár</summary>
+<div class="detail-body"><p>A JÖSz Intézet kutatási, kutatástámogató, oktatási és kiadói tevékenységet végez, publikációs felületet és tehetséggondozó programokat biztosít. Az Energia, IT és AI Akadémiák a jog és más szakterületek találkozásában adnak gyakorlati, naprakész tudást.</p><p>A JÖSz Könyvtár a szakkollégisták és kutatók tudományos munkáját támogatja hazai és külföldi jogtudományi, társadalomtudományi és egyetemi szakirodalommal.</p></div>
+</details>
+<details>
+<summary>Studia Pragmatica</summary>
+<div class="detail-body"><p>A 2022-ben létrehozott Studia Pragmatica a joghallgatók gyakorlati tapasztalatszerzését segítő program. A résztvevők partner ügyvédi irodákban, mentorálás mellett dolgozhatnak valódi ügyeken, az egyetemi időbeosztáshoz igazítható munkarendben.</p></div>
+</details>
+<details>
+<summary>Nyári Egyetem</summary>
+<div class="detail-body"><p>A Nyári Egyetem a JÖSz életében már hagyománynak számító többnapos rendezvénysorozat. Jogszakmai beszélgetések, közéleti viták, kulturális és közösségi programok adnak lehetőséget arra, hogy a résztvevők betekintsenek a JÖSz mindennapjaiba, közben tudást és kapcsolatokat szerezzenek.</p><p>A rendezvény nemcsak szakkollégistáknak és joghallgatóknak szól: minden érdeklődőt vár.</p></div>
+</details>
+</div>
+</div>
+</div>
+</section>
+<section class="tickets" id="jegyek">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Jegyárak</div><h2>Találd meg a neked valót.</h2></div><p>A részvételi lehetőségek között többféle bérlet és napijegy közül választhatsz. Hat év alatt a rendezvény ingyenes.</p></div>
+<div class="ticket-grid">
+<div class="ticket"><div class="type">Gólyabérlet</div><div class="price">23 000 Ft</div><small>háromnapos bérlet</small></div>
+<div class="ticket featured"><div class="type">JÖSz bérlet</div><div class="price">25 000 Ft</div><small>háromnapos bérlet</small></div>
+<div class="ticket"><div class="type">Normál bérlet</div><div class="price">35 000 Ft</div><small>háromnapos bérlet</small></div>
+<div class="ticket"><div class="type">Támogatói jegy</div><div class="price">50 000 Ft</div><small>támogatói konstrukció</small></div>
+<div class="ticket"><div class="type">Napi jegy • szállás nélkül</div><div class="price">12 000 Ft</div></div>
+<div class="ticket"><div class="type">Napi jegy • szállással</div><div class="price">25 000 Ft</div></div>
+<div class="ticket"><div class="type">Családi napi jegy</div><div class="price">23 000 Ft</div><small>2 felnőtt + 1 vagy 2 gyermek</small></div>
+<div class="ticket"><div class="type">Családi bérlet</div><div class="price">55 000 Ft</div><small>2 felnőtt + 1 vagy 2 gyermek</small></div>
+</div>
+<div class="included">
+<div><b>3 napos bérlet:</b> programok, sportolási és szórakozási lehetőségek</div>
+<div><b>2 éjszaka:</b> szállás a kemping faházaiban, a férőhelyek befizetési sorrendben kerülnek kiosztásra</div>
+<div><b>Étkezés:</b> napi három étkezés, érkezéskor vacsora és távozáskor reggeli</div>
+</div>
+</div>
+</section>
+<section id="helyszin">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Helyszín</div><h2>Mátra Kemping, Sástó.</h2></div><p>Faházak, tópart, erdő és közösségi terek — mindez közvetlenül a Mátra egyik legismertebb kirándulóhelyén.</p></div>
+<div class="venue-grid">
+<div class="venue-main"><img alt="Légi felvétel a Mátra Kempingről" src="assets/camp-aerial.jpg"/><div class="label"><b>Mátra Kemping Sástó</b><span>Libegő • panoráma • túraútvonalak • csónakázás • tűzrakóhelyek</span></div></div>
+<div class="gallery">
+<button aria-label="Libegő képének megnyitása" data-img="assets/chairlift.jpg"><img alt="Libegő a Mátrában" src="assets/chairlift.jpg"/><span class="tag">Libegő</span></button>
+<button aria-label="Sástó park képének megnyitása" data-img="assets/lake-park.jpg"><img alt="A Sástó körüli park" src="assets/lake-park.jpg"/><span class="tag">Sétányok</span></button>
+<button aria-label="Csónakok képének megnyitása" data-img="assets/boats.jpg"><img alt="Csónakok a Sástón" src="assets/boats.jpg"/><span class="tag">Csónakázás</span></button>
+<button aria-label="Faházak képének megnyitása" data-img="assets/cabins.jpg"><img alt="Faházak a Mátra Kempingben" src="assets/cabins.jpg"/><span class="tag">Faházak</span></button>
+<button aria-label="Tűzrakóhely képének megnyitása" data-img="assets/fireplace.jpg"><img alt="Fedett közösségi tér és tűzrakóhely" src="assets/fireplace.jpg"/><span class="tag">Tábortűz</span></button>
+<button aria-label="Pince képének megnyitása" data-img="assets/wine-cellar.jpg"><img alt="Hangulatos pince és közösségi tér" src="assets/wine-cellar.jpg"/><span class="tag">Borkóstoló</span></button>
+</div>
+</div>
+<div class="activities" id="egyeb-programok">
+<div class="activities-head">
+<div><div class="eyebrow">További lehetőségek a helyszínen</div><h3>Fedezd fel Sástót és a Mátrát.</h3></div>
+<p>A szakmai programok között is érdemes időt hagyni a környék felfedezésére: Sástó és a Mátra számos szabadtéri és közösségi lehetőséget kínál.</p>
+</div>
+<div class="activity-grid">
+<article class="activity-card"><span class="activity-kicker">Panoráma</span><b>Mátra Libegő</b><p>Libegőzés és hegyi panoráma közvetlenül a kemping közelében.</p></article>
+<article class="activity-card"><span class="activity-kicker">Természet</span><b>Álomszép túraútvonalak</b><p>Erdei kirándulóösvények és mátrai túrák rövidebb vagy hosszabb szabadidős blokkokhoz.</p></article>
+<article class="activity-card"><span class="activity-kicker">Vízpart</span><b>Csónakázás a Sástón</b><p>A központi tavon csónakázással is ki lehet kapcsolódni a programok között.</p></article>
+<article class="activity-card"><span class="activity-kicker">Pihenés</span><b>Tóparti park és sétányok</b><p>Zöld, zegzugos park, sétányok és pihenőhelyek veszik körbe a tavat.</p></article>
+<article class="activity-card"><span class="activity-kicker">Közösség</span><b>Tűzrakóhelyek</b><p>Szabadtéri pihenők és tűzrakóhelyek adnak teret a közös esti programoknak.</p></article>
+<article class="activity-card"><span class="activity-kicker">Közösségi terek</span><b>Fedett pihenők és pince</b><p>A kemping fedett közösségi terekkel és hangulatos pincével is rendelkezik.</p></article>
+</div>
+</div>
+<div class="site-map" id="kempingterkep">
+<div class="site-map-head">
+<div><div class="eyebrow">Kempingtérkép</div><h3>Találd meg könnyen a helyszíneket.</h3></div>
+<p>A térképen külön jelölve vannak a rendezvényhelyszínek, a szállások, a mosdók és az egyéb fontos pontok. Kattints a térképre a nagyításhoz.</p>
+</div>
+<button aria-label="A Mátra Kemping rendezvénytérképének megnyitása nagy méretben" data-img="assets/kemping-terkep.jpeg"><img alt="A Mátra Kemping Sástó rendezvénytérképe, jelölt helyszínekkel és szállásokkal" src="assets/kemping-terkep.jpeg"/></button>
+<p class="site-map-note">A kemping területén 5 km/h sebességkorlátozás van érvényben.</p>
+</div>
+<div class="hero-actions" style="margin-top:24px">
+<a class="btn btn-primary" href="https://matrakemping.hu" rel="noopener" target="_blank">Mátra Kemping honlapja ↗</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%A1tra+Kemping+S%C3%A1st%C3%B3" rel="noopener" style="border-color:var(--green-900)" target="_blank">Megnyitás térképen</a>
+</div>
+</div>
+</section>
+<section class="travel-section" id="odaut">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Odaút</div><h2>Így jutsz el Sástóra.</h2></div><p>A Mátra Kemping Sástó címe: <strong>3200 Gyöngyös, Farkas út 4.</strong> Budapestről autóval körülbelül 88 km, nagyjából másfél óra az út.</p></div>
+<div class="travel-grid">
+<div class="travel-copy">
+<div class="eyebrow" style="color:var(--orange)">Utazási információk</div>
+<h3>Tervezd meg előre az érkezést.</h3>
+<p>Akár autóval, akár tömegközlekedéssel érkezel, az alábbi útvonalterv segít eljutni a Mátra Kemping Sástóhoz.</p>
+<div class="travel-facts">
+<div class="travel-fact"><b>Autóval Budapestről</b><span>Kb. 88 km, hozzávetőleg 1,5 óra. Indulás előtt érdemes ellenőrizni az aktuális forgalmi helyzetet.</span></div>
+<div class="travel-fact"><b>Tömegközlekedéssel</b><span>A térkép a Puskás Ferenc Stadiontól mutat útvonalat a kempinghez.</span></div>
+<div class="travel-fact"><b>Érkezési cím</b><span>Mátra Kemping Sástó • 3200 Gyöngyös, Farkas út 4.</span></div>
+</div>
+<a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%A1tra+Kemping+S%C3%A1st%C3%B3" rel="noopener" target="_blank">Útvonal megnyitása ↗</a>
+</div>
+<div>
+<div class="travel-map">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d687798.7234220627!2d18.869121339240106!3d47.67055674542031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x4741dc99cdec3349%3A0x6a04a4d7aa06a308!2sPusk%C3%A1s%20Ferenc%20Stadion%2C%20Budapest%2C%201146!3m2!1d47.5001353!2d19.1048136!4m5!1s0x47405bf2e44a77a9%3A0x8ace85f7439ebc36!2zTcOhdHJhIEtlbXBpbmcgU8Ohc3TDsywgR3nDtm5necO2cywgRmFya2FzIMO6dCA0LCAzMjAw!3m2!1d47.8441184!2d19.957846999999997!5e0!3m2!1shu!2shu!4v1787579531108!5m2!1shu!2shu" title="Útvonal a Puskás Ferenc Stadiontól a Mátra Kemping Sástóhoz"></iframe>
+</div>
+<p class="travel-note">A menetrendek és menetidők változhatnak, ezért indulás előtt ellenőrizd az aktuális útvonalat.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="registration" id="jelentkezes">
+<div class="contours"></div>
+<div class="container reg-grid" style="position:relative;z-index:1">
+<div><div class="eyebrow" style="color:var(--yellow)">Jelentkezés</div><div class="deadline">Határidő:<br/>augusztus 24.</div><p>A regisztráció a szervezők űrlapján történik. Kérdés esetén írj bátran a szervezőknek.</p><a class="btn" href="mailto:nyariegyetem@josz.org?subject=VII.%20J%C3%96Sz%20Ny%C3%A1ri%20Egyetem%20-%20jelentkez%C3%A9s" style="background:white;color:var(--red);margin-top:10px">Kapcsolat a szervezőkkel →</a></div>
+<div class="reg-steps">
+<div>Az űrlap kitöltésével jelzed a részvételi szándékodat.</div>
+<div>Sikeres rögzítés esetén megerősítő oldalt látsz, majd automatikus e-mail érkezik.</div>
+<div>A szervezők e-mailben visszajeleznek a regisztráció sikeréről és a fizetés módjáról.</div>
+<div>A regisztráció a részvételi díj befizetésével és a szállásfoglalás visszaigazolásával válik véglegessé.</div>
+<div>Egy űrlapon egyszerre egy személy jelentkezhet; a regisztráció nem átruházható.</div>
+<div>A helyszíni regisztrációhoz hozz magaddal fényképes igazolványt.</div>
+<p class="reg-note">Kapcsolat: <a href="mailto:nyariegyetem@josz.org"><strong>nyariegyetem@josz.org</strong></a></p>
+</div>
+</div>
+</section>
+<section class="poster-section">
+<div class="container poster-grid">
+<a aria-label="A teljes eseményplakát megnyitása" class="poster-img" href="assets/poster-main.jpg" target="_blank"><img alt="A VII. JÖSz Nyári Egyetem teljes információs plakátja" src="assets/poster-main.jpg"/></a>
+<div class="poster-copy"><div class="eyebrow" style="color:var(--orange)">Minden egyben</div><h2>Töltsd le vagy nyisd meg a teljes tájékoztatót.</h2><p>A teljes eseményplakátot itt is megnyithatod vagy letöltheted. Az aktuális programot a fenti Program szekcióban találod.</p><a class="btn btn-light" download="" href="assets/poster-main.jpg">Plakát letöltése</a></div>
+</div>
+</section>
 </main>
-
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div><div class="footer-title">VII. JÖSz Nyári Egyetem</div><p class="muted">2026. augusztus 28–30. • Mátra Kemping, Sástó</p></div>
-      <div><strong>Kapcsolat</strong><p><a href="mailto:nyariegyetem@josz.org">nyariegyetem@josz.org</a></p><p class="muted">A rendezvény nem sajtónyilvános.</p></div>
-      <div><strong>Gyorslinkek</strong><p><a href="#program">Program</a> · <a href="#josz">A JÖSz-ről</a> · <a href="#jegyek">Jegyek</a> · <a href="#helyszin">Helyszín</a> · <a href="#odaut">Odaút</a> · <a href="#kempingterkep">Térkép</a></p><p><a href="https://josz.org/" target="_blank" rel="noopener">josz.org ↗</a> · <a href="https://matrakemping.hu" target="_blank" rel="noopener">matrakemping.hu ↗</a></p></div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 Jogászok Önképző Szervezetéért Alapítvány.</span><span>Programváltozás joga fenntartva.</span></div>
-  </div>
+<div class="container">
+<div class="footer-grid">
+<div><div class="footer-title">VII. JÖSz Nyári Egyetem</div><p class="muted">2026. augusztus 28–30. • Mátra Kemping, Sástó</p></div>
+<div><strong>Kapcsolat</strong><p><a href="mailto:nyariegyetem@josz.org">nyariegyetem@josz.org</a></p><p class="muted">A rendezvény nem sajtónyilvános.</p></div>
+<div><strong>Gyorslinkek</strong><p><a href="#program">Program</a> · <a href="#josz">A JÖSz-ről</a> · <a href="#jegyek">Jegyek</a> · <a href="#helyszin">Helyszín</a> · <a href="#odaut">Odaút</a> · <a href="#kempingterkep">Térkép</a></p><p><a href="https://josz.org/" rel="noopener" target="_blank">josz.org ↗</a> · <a href="https://matrakemping.hu" rel="noopener" target="_blank">matrakemping.hu ↗</a></p></div>
+</div>
+<div class="footer-bottom"><span>© 2026 Jogászok Önképző Szervezetéért Alapítvány.</span><span>Programváltozás joga fenntartva.</span></div>
+</div>
 </footer>
-
-<dialog id="lightbox"><button aria-label="Bezárás">×</button><img alt="Nagyított helyszínfotó" /></dialog>
-
+<dialog id="lightbox"><button aria-label="Bezárás">×</button><img alt="Nagyított helyszínfotó"/></dialog>
 <script>
   const menuBtn=document.querySelector('.menu-btn'); const navLinks=document.querySelector('.nav-links');
   menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open)});
@@ -824,5 +809,17 @@
   document.querySelectorAll('[data-img]').forEach(b=>b.addEventListener('click',()=>{dlgImg.src=b.dataset.img;dlg.showModal()}));
   dlg.querySelector('button').addEventListener('click',()=>dlg.close()); dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 </script>
-</body>
+<script>
+(() => {
+  document.querySelectorAll('img[src^="assets/"]').forEach((img) => {
+    img.addEventListener('error', () => {
+      if (img.dataset.retryDone) return;
+      img.dataset.retryDone = '1';
+      const original = img.getAttribute('src').split('?')[0];
+      img.removeAttribute('loading');
+      img.src = original + '?retry=1';
+    }, { once: true });
+  });
+})();
+</script></body>
 </html>
