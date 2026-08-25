@@ -1,15 +1,11 @@
-# VII. JÖSz Nyári Egyetem – honlap
+# VII. JÖSz Nyári Egyetem – GitHub Pages
 
-Statikus, reszponzív honlap a 2026. augusztus 28–30. között megrendezett VII. JÖSz Nyári Egyetemhez.
+Optimalizált statikus weboldal GitHub Pageshez.
 
-## Használat
-Nyisd meg az `index.html` fájlt böngészőben, vagy töltsd fel a teljes mappát GitHub Pagesre, Netlifyra vagy más statikus tárhelyre.
+## Publikálás
+1. Töltsd fel a mappa tartalmát a repository gyökerébe.
+2. GitHub: Settings → Pages.
+3. Source: Deploy from a branch.
+4. Branch: `main`, folder: `/ (root)`.
 
-A weboldal tartalmazza a programot, előadókat, jegyárakat, helyszíni lehetőségeket, kempingtérképet, JÖSz-bemutatkozást, támogatási adatokat és egy Google Maps útvonaltervezővel ellátott Odaút szekciót.
-
-
-## Új vizuális elemek
-- Önkormányzatiság 2026-ban közös előadói grafika
-- Baranyi Krisztina és Dr. Cser-Palkovics András egyéni előadói grafikái
-- JÖSz Alapítvány, JÖSz Intézet és JÖSz Alumni logók
-- Kempingtérkép a helyszín szekcióban
+A képek optimalizált WebP formátumban vannak, a `.nojekyll` fájl biztosítja a közvetlen statikus kiszolgálást.
