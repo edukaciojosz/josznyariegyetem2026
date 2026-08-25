@@ -1,11 +1,9 @@
-# VII. JÖSz Nyári Egyetem – GitHub Pages
+# VII. JÖSz Nyári Egyetem – GitHub Pages verzió
 
-Optimalizált statikus weboldal GitHub Pageshez.
+Ez a mappa közvetlenül feltölthető egy GitHub repository gyökerébe és GitHub Pagesen publikálható.
 
-## Publikálás
-1. Töltsd fel a mappa tartalmát a repository gyökerébe.
-2. GitHub: Settings → Pages.
-3. Source: Deploy from a branch.
-4. Branch: `main`, folder: `/ (root)`.
+- `index.html` – főoldal
+- `assets/` – optimalizált képek, előadói grafikák, programképek és logók
+- `.nojekyll` – egyszerű statikus kiszolgáláshoz
 
-A képek optimalizált WebP formátumban vannak, a `.nojekyll` fájl biztosítja a közvetlen statikus kiszolgálást.
+Az előadói és programképek WebP formátumban, webes méretre optimalizálva szerepelnek.
