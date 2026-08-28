@@ -1,9 +1,9 @@
-# VII. JÖSz Nyári Egyetem – weboldal
+# VII. JÖSz Nyári Egyetem – GitHub Pages verzió
 
-A csomag teljes, statikus weboldal. Az `index.html` mellé az `assets` mappa teljes tartalmát is fel kell tölteni.
+Ez a mappa közvetlenül feltölthető egy GitHub repository gyökerébe és GitHub Pagesen publikálható.
 
-A jelenlegi verzióban:
-- a jelentkezési rész eltávolításra került;
-- az előadói képek felugró nagyítóban nyílnak meg;
-- az összes szükséges kép a csomag része;
-- az Odaút és visszaút rész tartalmazza a napi utazási javaslatokat, a 1045-ös busz menetrendjét és a Google Maps útvonaltervezőt.
+- `index.html` – főoldal
+- `assets/` – optimalizált képek, előadói grafikák, programképek és logók
+- `.nojekyll` – egyszerű statikus kiszolgáláshoz
+
+Az előadói és programképek WebP formátumban, webes méretre optimalizálva szerepelnek.
